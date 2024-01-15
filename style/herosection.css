@@ -1,3 +1,9 @@
+.hero-flexer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hero-section {
   padding-left: 8%;
   padding-right: 8%;
@@ -6,8 +12,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-bottom: 0;
+  max-width: 1920px;
 }
 
 .col-1 {
@@ -127,6 +134,7 @@
   padding: 10px;
   padding-left: 8%;
   padding-right: 8%;
+  max-width: 1920px;
 }
 .skills::-webkit-scrollbar {
   height: 5px;

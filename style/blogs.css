@@ -2,6 +2,11 @@
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3%;
 }
 .blog-review {
   background-color: transparent;
@@ -51,6 +56,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  max-width: 1920px;
 }
 
 @media only screen and (max-width: 800px) {

@@ -5,6 +5,25 @@
   --main-header-color: #1e1e1e;
   --main-back-color: #848484;
 }
+.header-flexer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-header-color);
+}
+.size-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-header-color);
+  top: 0px;
+
+  position: fixed;
+  z-index: 10;
+}
+
 .navbar {
   width: 100%;
   display: flex;
@@ -12,10 +31,7 @@
   padding-left: 8%;
   padding-right: 8%;
   background-color: var(--main-header-color);
-
-  position: fixed;
-  top: o;
-  z-index: 10;
+  max-width: 1920px;
 }
 
 .logo {
@@ -23,6 +39,7 @@
   width: 140px;
   cursor: pointer;
   margin: 30px 0;
+  margin-left: 10%;
 }
 
 .menu-icon {

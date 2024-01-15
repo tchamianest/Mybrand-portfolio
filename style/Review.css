@@ -3,6 +3,10 @@
   padding-right: 10%;
   padding-top: 3%;
   padding-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* special header name view */
@@ -20,6 +24,7 @@
   padding-bottom: 70px;
   height: fit-content;
   border-radius: 15px;
+  max-width: 1920px;
 }
 
 .review-text {

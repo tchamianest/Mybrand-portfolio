@@ -6,6 +6,7 @@
   font-family: "Syne", sans-serif;
   background-color: var(--main-background-color);
 }
+
 :root {
   --main-background-color: #101113;
   --main-section-color: #1e1e1e;

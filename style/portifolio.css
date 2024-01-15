@@ -5,6 +5,9 @@
   padding-left: 8%;
   padding-right: 8%;
   background-color: #1e1e1e;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .gallery {
@@ -15,6 +18,7 @@
   justify-content: space-between;
   background-color: transparent;
   padding-top: 10%;
+  max-width: 1920px;
 }
 .gallery a {
   background-color: transparent;
