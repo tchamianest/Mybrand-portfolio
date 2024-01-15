@@ -1,0 +1,138 @@
+.skills-section {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.skills-three {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skills-container {
+  margin-left: 30px;
+  height: 300px;
+  max-width: 300px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 70px;
+  padding-bottom: 40px;
+  position: relative;
+  background-color: #1e1e1e;
+  border-radius: 20px;
+}
+.skills-container img {
+  position: absolute;
+  margin-top: 20px;
+  width: 120px;
+  margin-left: 10px;
+  top: 0;
+  left: 0;
+  margin-bottom: 40px;
+  background-color: transparent;
+}
+.skills-bottom,
+.skills-title {
+  text-align: center;
+
+  color: #4f4747;
+  font-family: Syne;
+  font-size: 46px;
+  font-style: normal;
+  background-color: transparent;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.skills-bottom {
+  margin-top: 90px;
+}
+.skills-title-unic {
+  margin-top: 120px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  font-family: Syne;
+  font-size: 27px;
+  color: white;
+}
+
+.skills-description {
+  background-color: transparent;
+  color: white;
+}
+
+/* RESPONSIVENESS  */
+
+@media only screen and (max-width: 1110px) {
+  .skills-container {
+    height: 360px;
+    max-width: 300px;
+  }
+  .skills-container img {
+    position: absolute;
+    margin-top: 10px;
+    width: 100px;
+    margin-left: 5px;
+    top: 0;
+    left: 0;
+    margin-bottom: 40px;
+  }
+}
+
+/* mobile View  */
+@media only screen and (max-width: 888px) {
+  .skills-container {
+    height: 200px;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  .skills-three {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .skills-description {
+    font-size: 10px;
+  }
+  .skills-title-unic {
+    font-size: 16px;
+    margin-top: 60px;
+  }
+}
+
+/* /////Small devices  */
+@media only screen and (max-width: 500px) {
+  .skills-container {
+    height: 260px;
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+  .skills-three {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .skills-container img {
+    position: absolute;
+    margin-top: 7px;
+    width: 70px;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+  }
+
+  .skills-title-unic {
+    margin-top: 30px;
+  }
+  .skills-title,
+  .skills-bottom {
+    font-size: 20px;
+  }
+  .skills-bottom {
+    margin-top: 30px;
+  }
+}

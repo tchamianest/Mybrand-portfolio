@@ -2,57 +2,204 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portifolio website</title>
+    <title>my portifolio web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/herosection.css" />
+    <link rel="stylesheet" href="style/header.css" />
+    <link rel="stylesheet" href="style/general.css" />
+    <link rel="stylesheet" href="style/herosection.css" />
+    <link rel="stylesheet" href="style/skills.css"/>
+    <link rel="stylesheet" href="style/portifolio.css"/>
+    <link rel="stylesheet" href="style/Review.css"/>
+    <link rel="stylesheet" href="style/blogs.css"/>
+    <link rel="stylesheet" href="style/footer.css"/>
   </head>
   <body>
-    <div class="header-top">
-      <div class="Logo-section">
-        <a href="">
-          <img src="imagess/top-logo.png" title="top-logo" />
-        </a>
+    <div class="conatiner">
+      <div class="navbar">
+        <img src="imagess/top-logo.png" alt="" class="logo" />
+        <nav>
+          <ul class="menu-list-java">
+            <li><a class="search-home" href="">Home</a></li>
+            <li><a class="search-home" href="">Abaut Me</a></li>
+            <li><a class="search-home" href="">Blogs</a></li>
+            <li><a class="search-home" href="">Contact Us</a></li>
+            <li><a class="search-home" href="">Portfolio</a></li>
+            <li><a class="search-home" href="">Social Media</a></li>
+          </ul>
+        </nav>
+        <img
+          class="menu-icon"
+          src="imagess/icons/menu-svgrepo-com.svg"
+          alt="menu-button" onclick="Toggle()"
+        />
+        <button class="left-button">Sigin/Login &rarr;</button>
       </div>
-      <div class="menu-button">
-        <a class="search-home" href="">Home</a>
-        <a class="search-home" href="">Abaut Me</a>
-        <a class="search-home" href="">Portfolio</a>
-        <a class="search-home" href="">Blogs</a>
-        <a class="search-home" href="">Contact Us</a>
-        <a class="search-home" href="">Social Media</a>
-      </div>
-      <div class="sign-in-button">
-        <button class="login-button">
-          Sign/Login
-          <img src="imagess/icons/right-icon.png" />
-        </button>
-      </div>
-    </div>
-    <div class="body-container">
-      <div class="herosection">
-        <div class="hero-text">
-          <p class="text-hero">
-            I'M <span class="name-developer">TCHAMI ERNEST</span> <br />
-            A FULLSTACK DEVELOPER.
+      <div class="hero-section">
+        <div class="col-1">
+          <p class="hero-text">
+            I'M <span class="name-developer">TCHAMI ERNEST</span>
           </p>
-          <p class="hero-description">
+          <p class="FULLSTACK">A FULLSTACK DEVELOPER.
+            <div class="colorprofile-2"></div>
+          </p>
+          <h1>
             I'm a Full Stack Developer passionate about crafting robust and
             scalable solutions. With a blend of front-end finesse and back-end
             expertise, I bring ideas to life. Explore my projects and discover
             how I turn code into meaningful experiences."
-          </p>
-          <button class="button-hero">link me</button>
+          </h1>
+          <button type="button" class="button-hero"><div class="insider-btn"></div>Link me &rarr; </button>
         </div>
-        <div class="hero-profile-image">
-          <img src="imagess/profile.png" />
+        <div class="col-2">
+          <img src="/imagess/profile.png" class="profile-controller" />
+          <div class="colorprofile"></div>
+        </div>
+      </div>
+      <div class="skills">
+        <p>Node.Js</p>
+        <p>Javascript</p>
+        <p>React.Js</p>
+        <p>MongoDB</p>
+        <p>Express</p>
+        <p>Typscript</p>
+        <p>HTML</p>
+        <p>Css</p>
+        <p>UX/DI</p>
+      </div>
+
+      <div class="skills-section">
+        <p class="skills-title">SKILLS</p>
+        <div class="skills-three">
+          <div class="skills-container">
+            <img src="/imagess/icons/react-icons 1.png">
+            <p class="skills-title-unic">React Js</p>
+            <p class="skills-description">Experienced in building scalable, responsive web apps. Strong in modular design, state management, and performance optimization. Skilled in API integration and testing. Ready to elevate your projects with React.js expertise.</p>
+          </div>
+          <div class="skills-container">
+            <img src="/imagess/icons/Frame.png">
+            <p class="skills-title-unic">UI/UX Design</p>
+            <p class="skills-description">Experienced in building scalable, responsive web apps. Strong in modular design, state management, and performance optimization. Skilled in API integration and testing. Ready to elevate your projects with React.js expertise.</p>
+          </div>
+          <div class="skills-container">
+            <img src="/imagess/icons/jsname.png">
+            <p class="skills-title-unic">Node.JS</p>
+            <p class="skills-description">Experienced in building scalable, responsive web apps. Strong in modular design, state management, and performance optimization. Skilled in API integration and testing. Ready to elevate your projects with React.js expertise.</p>
+          </div>
+        </div>
+        <p class="skills-bottom">PORTIFOLIO</p>
+
+      </div>
+      <div class="portifolio-container">
+       <div class="gallery">
+         <a href="">
+          <div class="card-portifolio">
+            <img src="imagess/Rectangle 19768.png" class="image-portifolio">
+            <div class="card-text">
+              <p class="card-text-head"> Web Design</p>
+              <p class="card-text-description"> Web responsiveness ensures a consistent user experience on all devices, boosts SEO, and is cost-effective</p>
+            </div>
+          </div>
+         </a>
+         <a href="">
+          <div class="card-portifolio">
+            <img src="imagess/recatngula2.png" class="image-portifolio">
+            <div class="card-text">
+              <p class="card-text-head"> LOGO Design</p>
+              <p class="card-text-description"> Web responsiveness ensures a consistent user experience on all devices, boosts SEO, and is cost-effective</p>
+            </div>
+          </div>
+         </a>
+         <a href="">
+          <div class="card-portifolio">
+            <img src="imagess/recatngula2.png" class="image-portifolio">
+            <div class="card-text">
+              <p class="card-text-head"> UI/UX Design</p>
+              <p class="card-text-description"> Web responsiveness ensures a consistent user experience on all devices, boosts SEO, and is cost-effective</p>
+            </div>
+          </div>
+         </a>
+         <a href="">
+          <div class="card-portifolio">
+            <img src="imagess/Rectangle 19768.png" class="image-portifolio">
+            <div class="card-text">
+              <p class="card-text-head"> Back-end</p>
+              <p class="card-text-description"> Web responsiveness ensures a consistent user experience on all devices, boosts SEO, and is cost-effective</p>
+            </div>
+          </div>
+         </a>
+
+
+
+
+       </div>
+      </div>
+      <div class="reviw-container">
+        <p class="skills-title review ">REVIEWS PAGE</p>
+        <div class="card-review">
+          <div class="review-text">
+            <p class="writter">Jessica Evans</p>
+            <p class="review-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan condimentum massa ac malesuada, consectetur adipiscing elit.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              <p class="qoute-img">&quot;</p>
+          </div>
+          <div class="review-img">
+            <img src="imagess/image.png">
+          </div>
+        </div>
+      </div>
+      <div class="blog-container">
+         <p class="skills-title review ">BLOGS</p>
+         <div class="blog-slider">
+          <a href="" class="link-blog">
+            <div class="blog-review">
+              <img src="imagess/blog-1.png">
+              <p class="blog-title">Reasons Business needs Agency.</p>
+              <p class="blog-description">Design Club is a digital agency specialized in ecommerce. We build scalable, high-end web shops.</p>
+          </div>
+          </a>
+          <a href="" class="link-blog">
+            <div class="blog-review">
+              <img src="imagess/blog-3.png">
+              <p class="blog-title">Reasons Business needs Agency.</p>
+              <p class="blog-description">Design Club is a digital agency specialized in ecommerce. We build scalable, high-end web shops.</p>
+          </div>
+          </a>
+          <a href="" class="link-blog">
+            <div class="blog-review">
+              <img src="imagess/blog-2.png">
+              <p class="blog-title">Reasons Business needs Agency.</p>
+              <p class="blog-description">Design Club is a digital agency specialized in ecommerce. We build scalable, high-end web shops.</p>
+          </div>
+          </a>
+         </div>
+        
+       
+      </div>
+
+      <div class="footer-container">
+        <div class="footer-conatiner">
+
+        </div>
+        <div class="copy-right">
+          <p>Copyright © 2024 Tchami Ernest. Kigali Rwanda </p>
         </div>
       </div>
     </div>
+    <script >
+        var menulist=document.querySelector(".menu-list-java");
+        menulist.style.maxHeight="0px";
+        function Toggle(){
+            if(menulist.style.maxHeight==="0px"){
+                menulist.style.maxHeight="250px";
+            }else{
+                menulist.style.maxHeight="0px";
+            }
+        }
+    </script>
   </body>
 </html>

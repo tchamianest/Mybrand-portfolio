@@ -1,0 +1,29 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.copy-right {
+  height: 50px;
+  background-color: var(--main-header-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copy-right p {
+  background-color: transparent;
+  text-align: center;
+  color: #fff;
+
+  text-align: center;
+  font-family: Syne;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 406px) {
+  .copy-right p {
+    font-size: 10px;
+  }
+}

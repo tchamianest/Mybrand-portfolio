@@ -1,0 +1,249 @@
+.hero-section {
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 8%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 150px;
+  margin-bottom: 0;
+}
+
+.col-1 {
+  flex-basis: 60%;
+  position: relative;
+  margin-left: 50px;
+}
+
+.hero-text {
+  font-size: 25px;
+  color: white;
+  font-weight: 700;
+}
+
+.FULLSTACK {
+  display: block;
+  font-size: 25px;
+  color: white;
+  font-weight: 700;
+  margin-top: 9px;
+  position: relative;
+}
+.name-developer {
+  color: var(--main-yelow-color);
+}
+
+.col-1 h1 {
+  font-size: 15px;
+  color: white;
+  font-weight: lighter;
+  margin-top: 20px;
+  position: relative;
+}
+
+.button-hero {
+  color: white;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: color 0.5s;
+  position: relative;
+  z-index: 2;
+}
+.insider-btn {
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--main-yelow-color);
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: 1;
+}
+.button-hero:hover {
+  color: var(--main-yelow-color);
+}
+.button-hero:hover .insider-btn {
+  background-color: white;
+}
+/* image section col-2 */
+
+.col-2 {
+  flex-basis: 40%;
+  position: relative;
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.col-2 .profile-controller {
+  position: relative;
+  width: 99%;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.colorprofile {
+  position: absolute;
+  background-color: var(--main-yelow-color);
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#a6a101a5, #8e9e11a2, black);
+  border-radius: 50%;
+  transform: translateX(0px);
+  opacity: 0.2;
+}
+
+.colorprofile-2 {
+  position: absolute;
+  background-color: var(--main-yelow-color);
+  top: 0;
+  right: 270px;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(#114dcfa5, #000000c1);
+  border-radius: 50%;
+  transform: translateX(200px);
+  transform: translateY(-100px);
+  opacity: 0.2;
+}
+
+/* Skills section  */
+.skills {
+  widows: 100%;
+  background-color: var(--main-header-color);
+  height: 50px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding: 10px;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+.skills::-webkit-scrollbar {
+  height: 5px;
+}
+
+.skills::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.skills::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.skills p {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #c2a8a8;
+  font-family: Syne;
+  font-size: 35px;
+  font-style: normal;
+  background-color: transparent;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+@media only screen and (max-width: 769px) {
+  .hero-text {
+    font-size: 15px;
+  }
+
+  .FULLSTACK {
+    font-size: 15px;
+  }
+
+  .col-1 h1 {
+    font-size: 10px;
+  }
+
+  .colorprofile-2 {
+    position: absolute;
+    background-color: var(--main-yelow-color);
+    top: 0;
+    right: 70px;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(#114dcfa5, #000000c1);
+    border-radius: 50%;
+    transform: translateX(100px);
+    transform: translateY(-30px);
+    opacity: 0.2;
+  }
+}
+
+/* mobile View  */
+@media only screen and (max-width: 700px) {
+  /* hero secction */
+  .col-2 {
+    display: none;
+    width: 0;
+  }
+  .button-hero {
+    margin-bottom: 30px;
+  }
+  .col-1 {
+    flex-basis: 100%;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .menu-list-java {
+    display: none;
+  }
+  .hero-section {
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 6%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .col-1 h1 {
+    font-size: 17px;
+    color: white;
+    margin-top: 20px;
+  }
+  .FULLSTACK {
+    display: block;
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+    margin-top: 9px;
+  }
+  .hero-text {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .FULLSTACK {
+    display: block;
+    font-size: 42px;
+    font-weight: 600;
+  }
+  .hero-text {
+    font-size: 42px;
+  }
+
+  .col-1 h1 {
+    font-size: 27px;
+    margin-top: 20px;
+  }
+
+  .button-hero {
+    font-size: 30px;
+  }
+}
+
+/* mobile View  */
