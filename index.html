@@ -20,25 +20,28 @@
   </head>
   <body>
     <div class="conatiner">
-      <div class="navbar">
-        <img src="imagess/top-logo.png" alt="" class="logo" />
-        <nav>
-          <ul class="menu-list-java">
-            <li><a class="search-home" href="">Home</a></li>
-            <li><a class="search-home" href="">Abaut Me</a></li>
-            <li><a class="search-home" href="">Blogs</a></li>
-            <li><a class="search-home" href="">Contact Us</a></li>
-            <li><a class="search-home" href="">Portfolio</a></li>
-            <li><a class="search-home" href="">Social Media</a></li>
-          </ul>
-        </nav>
-        <img
-          class="menu-icon"
-          src="imagess/icons/menu-svgrepo-com.svg"
-          alt="menu-button" onclick="Toggle()"
-        />
-        <button class="left-button">Sigin/Login &rarr;</button>
-      </div>
+      <header>
+
+        <div class="navbar">
+          <img src="imagess/top-logo.png" alt="" class="logo" />
+          <nav>
+            <ul class="menu-list-java">
+              <li><a class="search-home" href="">Home</a></li>
+              <li><a class="search-home" href="">Abaut Me</a></li>
+              <li><a class="search-home" href="">Blogs</a></li>
+              <li><a class="search-home" href="">Contact Us</a></li>
+              <li><a class="search-home" href="">Portfolio</a></li>
+              <li><a class="search-home" href="">Social Media</a></li>
+            </ul>
+          </nav>
+          <img
+            class="menu-icon"
+            src="imagess/icons/menu-svgrepo-com.svg"
+            alt="menu-button" onclick="Toggle()"
+          />
+          <button class="left-button">Sigin/Login &rarr;</button>
+        </div>
+      </header>
       <div class="hero-section">
         <div class="col-1">
           <p class="hero-text">
@@ -181,14 +184,19 @@
        
       </div>
 
-      <div class="footer-container">
-        <div class="footer-conatiner">
 
+      <footer>
+        <div class="footer-container">
+          <div class="footer-text">
+            <div class="section-logo-footer">logo section</div>
+            <div class="betweeen-footer">between</div>
+            <div class="right-footer">right footer</div>
+          </div>
+          <div class="copy-right">
+            <p>Copyright © 2024 Tchami Ernest. Kigali Rwanda </p>
+          </div>
         </div>
-        <div class="copy-right">
-          <p>Copyright © 2024 Tchami Ernest. Kigali Rwanda </p>
-        </div>
-      </div>
+      </footer>
     </div>
     <script >
         var menulist=document.querySelector(".menu-list-java");

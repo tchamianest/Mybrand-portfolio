@@ -1,8 +1,50 @@
+footer {
+  background-color: var(--main-header-color);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
 .footer-container {
   display: flex;
   flex-direction: column;
+  background-color: transparent;
 }
 
+/* footer */
+.footer-text {
+  display: flex;
+  width: 100%;
+  max-width: 1920px;
+  flex-direction: row;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  gap: 10px;
+  padding-top: 30px;
+}
+
+/* footer body */
+.section-logo-footer {
+  width: 30%;
+  height: 100%;
+  background-color: aqua;
+}
+
+.betweeen-footer {
+  width: 30%;
+  height: 100%;
+  background-color: aquamarine;
+}
+
+.right-footer {
+  width: 30%;
+  height: 100%;
+  background-color: bisque;
+}
+/* copyright  */
 .copy-right {
   height: 50px;
   background-color: var(--main-header-color);
