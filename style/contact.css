@@ -35,8 +35,8 @@
   width: 60%;
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
   border-radius: 13px;
 }
 
@@ -78,4 +78,141 @@
 
 .socila-media a img:hover {
   opacity: 0.7;
+}
+
+.form-right {
+  background-color: transparent;
+  display: flex;
+  margin-bottom: 50px;
+}
+.longText,
+.form-right input {
+  flex: 1;
+  margin-left: 20px;
+  border: none;
+  border-radius: 13px;
+  color: #afafa8;
+  padding: 20px;
+  background-color: #464642;
+}
+.longText textarea:focus,
+.form-right input:focus {
+  border: none;
+}
+.form-right input:active {
+  border: none;
+}
+.longText {
+  flex: 1;
+}
+
+.title-form {
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 40px; /* 40.32px */
+  color: var(--main-yelow-color);
+}
+
+.button-form button {
+  margin-left: 0px;
+  width: 150px;
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  background-color: var(--main-yelow-color);
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.button-form button:hover {
+  background-color: rgba(192, 191, 191, 0.203);
+  color: var(--main-yelow-color);
+}
+
+.button-form {
+  background-color: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: right;
+  margin-right: 0px;
+}
+
+.socila-hide {
+  display: none;
+}
+@media only screen and (max-width: 1197px) {
+  .title-contact {
+    margin-bottom: 0px;
+    font-size: 8px;
+  }
+  .contact-description {
+    font-size: 7px;
+  }
+  .socila-media a img {
+    background-color: transparent;
+    width: 30px;
+    margin-right: 8px;
+  }
+  .socila-media {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-desicription {
+    font-size: 6px;
+    line-height: 10px;
+  }
+  .form-right {
+    display: block;
+  }
+  .form-right textarea,
+  .form-right input {
+    padding: 10px;
+    width: 80%;
+  }
+  .socila-hide {
+    display: block;
+    background-color: transparent;
+    padding-top: 40px;
+  }
+  .right-section {
+    width: 100%;
+  }
+  .contact-left-section {
+    display: none;
+  }
+  .socila-media {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .button-form {
+    align-items: center;
+    justify-content: center;
+  }
+  .button-form button {
+    width: 80%;
+  }
+  .socila-media {
+    padding-top: 5px;
+  }
+
+  .socila-media a img {
+    background-color: transparent;
+    width: 20px;
+    margin-right: 8px;
+  }
+  .title-contact {
+    margin-bottom: 0px;
+    font-size: 10px;
+  }
 }
