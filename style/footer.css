@@ -166,6 +166,7 @@ footer {
   justify-content: flex-end;
   text-align: left;
   background-color: transparent;
+  margin-left: 40px;
 }
 
 .right-footer form {
