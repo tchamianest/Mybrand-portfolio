@@ -74,6 +74,10 @@
   background-color: transparent;
   width: 50px;
   margin-right: 10px;
+  transition: 0.5s;
+}
+.socila-media a img:hover {
+  width: 45px;
 }
 
 .socila-media a img:hover {
