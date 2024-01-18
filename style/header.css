@@ -89,6 +89,14 @@ nav ul li a:hover {
   border-radius: 10px;
   transition: 0.2s;
 }
+.logo-link {
+  background-color: transparent;
+}
+.left-button a {
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+}
 .left-button:hover {
   background-color: rgba(192, 191, 191, 0.203);
   color: var(--main-yelow-color);
