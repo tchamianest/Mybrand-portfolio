@@ -1,0 +1,71 @@
+.body-dashbord {
+  position: fixed;
+  left: 25%;
+  top: 19%;
+  width: 80%;
+  min-height: 100vh;
+  overflow: scroll;
+}
+
+.body-dashbord p {
+  color: #4f4747;
+  text-align: left;
+  font-family: Syne;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 126%;
+  text-transform: uppercase;
+  padding-left: 3%;
+}
+.right-scrol {
+  overflow: scroll;
+}
+
+.right-scrol::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+.header-button {
+  background-color: ;
+  padding-left: 50px;
+  padding-top: 30px;
+  display: flex;
+  gap: 40px;
+}
+.button {
+  width: 27%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+.btn-1 {
+  background-color: #25d366;
+}
+.btn-2 {
+  background-color: #7a7373;
+}
+.btn-3 {
+  background-color: var(--main-yelow-color);
+}
+.button img {
+  background-color: transparent;
+  height: 60px;
+}
+.number-dash p {
+  background-color: transparent;
+  color: white;
+}
+.number-dash {
+  background-color: transparent;
+}
+.number-dash h1 {
+  color: #fff;
+  font-family: Inter;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: transparent;
+}
