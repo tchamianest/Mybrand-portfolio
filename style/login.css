@@ -1,0 +1,78 @@
+.blog-body {
+  padding-top: 70px;
+}
+
+.block {
+  display: block;
+  text-align: start;
+  padding-left: 20px;
+}
+
+.right-section {
+  height: 50%;
+}
+
+.button-login {
+  background-color: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.button-login button {
+  background-color: transparent;
+  width: 30%;
+  height: 60px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  color: white;
+  background-color: var(--main-yelow-color);
+  border: none;
+  border-radius: 10px;
+  transition: 0.2s;
+
+  margin-left: 20px;
+  border: none;
+  border-radius: 13px;
+  padding: 20px;
+}
+
+.button-login button:hover {
+  background-color: rgba(192, 191, 191, 0.203);
+  color: var(--main-yelow-color);
+}
+
+.form-contact {
+  background-color: transparent;
+  display: flex;
+  margin-bottom: 50px;
+  flex-direction: column;
+}
+
+.form-contact input {
+  flex: 1;
+  margin-left: 20px;
+  border: none;
+  border-radius: 13px;
+  color: #afafa8;
+  padding: 20px;
+  background-color: #464642;
+}
+
+.top-pad {
+  margin-top: 30px;
+  width: 40%;
+}
+.review {
+  margin-top: 0;
+}
+@media only screen and (max-width: 700px) {
+  .button-login button {
+    width: 100%;
+  }
+  .top-pad {
+    margin-top: 30px;
+    width: 70%;
+  }
+}

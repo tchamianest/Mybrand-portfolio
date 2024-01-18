@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my portifolio web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/header.css" />
+    <link rel="stylesheet" href="style/general.css" />
+    <link rel="stylesheet" href="style/herosection.css" />
+    <link rel="stylesheet" href="style/skills.css" />
+    <link rel="stylesheet" href="style/portifolio.css" />
+    <link rel="stylesheet" href="style/Review.css" />
+    <link rel="stylesheet" href="style/blogs.css" />
+    <link rel="stylesheet" href="style/footer.css" />
+    <link rel="stylesheet" href="style/contact.css" />
+    <link rel="stylesheet" href="style/login.css" />
+  </head>
+  <body>
+    <div class="conatiner">
+      <header>
+        <div class="size-header">
+          <div class="navbar">
+            <a href="http://127.0.0.1:5501/index.html" class="logo-link">
+              <img src="imagess/top-logo.png" alt="" class="logo" />
+            </a>
+            <nav>
+              <ul class="menu-list-java">
+                <li>
+                  <a class="search-home" href="http://127.0.0.1:5501/index.html"
+                    >Home</a
+                  >
+                </li>
+                <li><a class="search-home" href="">Abaut Me</a></li>
+                <li>
+                  <a class="search-home" href="http://127.0.0.1:5501/blogs.html"
+                    >Blogs</a
+                  >
+                </li>
+                <li><a class="search-home" href="">Contact Us</a></li>
+                <li><a class="search-home" href="">Portfolio</a></li>
+                <li><a class="search-home" href="">Social Media</a></li>
+              </ul>
+            </nav>
+            <img
+              class="menu-icon"
+              src="imagess/icons/menu-svgrepo-com.svg"
+              alt="menu-button"
+              onclick="Toggle()"
+            />
+            <button class="left-button">
+              <a href="http://127.0.0.1:5501/login.html">Sigin/Login &rarr;</a>
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="blog-body">
+        <div class="blog-container">
+          <p class="skills-title">Login Page</p>
+          <div class="contact-form review">
+            <div class="right-section top-pad">
+              <div class="form-contact">
+                <p class="title-form block">Email:</p>
+                <input
+                  type="text"
+                  class="input-name"
+                  placeholder="Enter Admin Email"
+                />
+              </div>
+              <div class="form-contact">
+                <p class="title-form block">Password:</p>
+                <input
+                  type="password"
+                  name="password"
+                  maxlength="8"
+                  minlength="6"
+                  placeholder="Enter different 8 char"
+                  class="input-name"
+                />
+              </div>
+              <div class="button-login">
+                <button>Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="header-flexer footer-container">
+          <div class="footer-text">
+            <div class="section-logo-footer">
+              <a class="logo-link" href="">
+                <img src="imagess/top-logo.png" class="logo-footer" />
+              </a>
+              <p class="footer-left-text">
+                Archetypes of the MODERN. identity are reinvented through
+                details.
+              </p>
+              <p class="phone-footer">
+                <img
+                  src="imagess/icons/phone.png"
+                  class="icons-footer"
+                />+250-789-696-745
+              </p>
+              <p class="phone-footer">
+                <img
+                  src="imagess/icons/message.png"
+                  class="icons-footer"
+                />+250-789-696-745
+              </p>
+            </div>
+            <div class="betweeen-footer">
+              <div class="pages-footer">
+                <h1>Pages</h1>
+                <div class="links-list">
+                  <a>Home</a>
+                  <a>Portifolio</a>
+                  <a>About Me</a>
+                  <a>Blogs</a>
+                </div>
+              </div>
+              <div class="services-footer">
+                <h1>Services</h1>
+                <div class="links-list1">
+                  <p>Graphic Design</p>
+                  <p>UXUI Design</p>
+                  <p>Social Media</p>
+                </div>
+              </div>
+            </div>
+            <div class="right-footer">
+              <h1>Country/Region</h1>
+              <form>
+                <select id="dropdown" name="dropdown">
+                  <option value="option1">International Version</option>
+                  <option value="option2">Local Version</option>
+                  <option value="option3">State version</option>
+                </select>
+              </form>
+              <form>
+                <select id="dropdown" name="dropdown">
+                  <option value="option1">English</option>
+                  <option value="option2">French</option>
+                  <option value="option3">Kiswahilli</option>
+                  <option value="option3">Kinyarwanda</option>
+                </select>
+              </form>
+            </div>
+          </div>
+          <div class="copy-right">
+            <p>Copyright © 2024 Tchami Ernest. Kigali Rwanda</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      var menulist = document.querySelector(".menu-list-java");
+      const navbar = document.querySelector("nav");
+      console.log(navbar);
+      menulist.style.maxHeight = "0px";
+      navbar.style.opacity = "1";
+      function Toggle() {
+        if (menulist.style.maxHeight === "0px") {
+          menulist.style.maxHeight = "250px";
+          menulist.style.maxwidth = "300px";
+          menulist.style.display = "block";
+          navbar.style.opacity = "1";
+        } else {
+          menulist.style.maxHeight = "0px";
+          navbar.style.opacity = "0";
+        }
+      }
+    </script>
+  </body>
+</html>

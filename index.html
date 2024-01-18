@@ -25,12 +25,15 @@
         <div class="size-header">
 
           <div class="navbar">
-            <img src="imagess/top-logo.png" alt="" class="logo" />
+            <a href="http://127.0.0.1:5501/index.html" class="logo-link">
+
+              <img src="imagess/top-logo.png" alt="" class="logo" />
+            </a>
             <nav>
               <ul class="menu-list-java">
-                <li><a class="search-home" href="">Home</a></li>
+                <li><a class="search-home" href="http://127.0.0.1:5501/index.html">Home</a></li>
                 <li><a class="search-home" href="">Abaut Me</a></li>
-                <li><a class="search-home" href="">Blogs</a></li>
+                <li><a class="search-home" href="http://127.0.0.1:5501/blogs.html">Blogs</a></li>
                 <li><a class="search-home" href="">Contact Us</a></li>
                 <li><a class="search-home" href="">Portfolio</a></li>
                 <li><a class="search-home" href="">Social Media</a></li>
@@ -41,12 +44,12 @@
               src="imagess/icons/menu-svgrepo-com.svg"
               alt="menu-button" onclick="Toggle()"
             />
-            <button class="left-button">Sigin/Login &rarr;</button>
+            <button class="left-button" ><a href="http://127.0.0.1:5501/login.html">Sigin/Login &rarr;</a></button>
           </div>
         </div>
 
       </header>
-      <div class="hero-flexer">
+      <section class="hero-flexer">
         <div class="hero-section">
           <div class="col-1">
             <p class="hero-text">
@@ -68,7 +71,7 @@
             <div class="colorprofile"></div>
           </div>
         </div>
-      </div>
+      </section>
       <div class="header-flexer">
 
         <div class="skills">
@@ -84,8 +87,8 @@
         </div>
       </div>
 
-      <div class="skills-section">
-        <p class="skills-title">SKILLS</p>
+      <section class="skills-section">
+        <p class="skills-title">CORE-SKILLS</p>
         <div class="skills-three">
           <div class="skills-container">
             <img src="/imagess/icons/react-icons 1.png">
@@ -105,7 +108,7 @@
         </div>
         <p class="skills-bottom">PORTIFOLIO</p>
 
-      </div>
+      </section>
       <div class="header-flexer">
 
         <div class="portifolio-container">
@@ -153,7 +156,7 @@
          </div>
         </div>
       </div>
-      <div class="reviw-container">
+      <section class="reviw-container">
         <p class="skills-title review ">REVIEWS PAGE</p>
         <div class="card-review">
           <div class="review-text">
@@ -166,8 +169,8 @@
             <img src="imagess/image.png">
           </div>
         </div>
-      </div>
-      <div class="blog-container">
+      </section>
+      <section class="blog-container">
          <p class="skills-title review ">BLOGS</p>
          <div class="blog-slider">
           <a href="" class="link-blog">
@@ -194,8 +197,8 @@
          </div>
         
        
-      </div>
-      <div class="blog-container ">
+      </section>
+      <section class="blog-container ">
         <p class="skills-title  ">Contact PAge</p>
         <p class="contact-desicription">Fill out the form and a member from our sales team will get back to you within 24 hours, or scroll down for more ways to get in touch.</p>  
         <div class="contact-form review">
@@ -240,8 +243,9 @@
             </div>
           </div>
         </div>  
-     </div>
+      </section>
       <footer>
+        <!-- footer container -->
         <div class="header-flexer footer-container">
             <div class="footer-text">
               <div class="section-logo-footer">
@@ -299,12 +303,19 @@
     </div>
     <script >
         var menulist=document.querySelector(".menu-list-java");
+        const navbar=document.querySelector('nav');
+        console.log(navbar)
         menulist.style.maxHeight="0px";
+        navbar.style.opacity="1";
         function Toggle(){
             if(menulist.style.maxHeight==="0px"){
                 menulist.style.maxHeight="250px";
+                menulist.style.maxwidth="300px"
+                menulist.style.display="block"
+                navbar.style.opacity="1";
             }else{
                 menulist.style.maxHeight="0px";
+                navbar.style.opacity="0";
             }
         }
     </script>

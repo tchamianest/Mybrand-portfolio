@@ -1,0 +1,68 @@
+:root {
+  --main-background-color: #101113;
+  --main-section-color: #1e1e1e;
+  --main-yelow-color: #a6a001;
+  --main-header-color: #4f4747;
+}
+
+.herosection {
+  background-image: url("/imagess/home-image.png");
+  background-size: 100%;
+  margin-top: 100px;
+  background-position: right;
+  width: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  margin-top: 100px;
+  left: 20px;
+}
+.hero-text {
+  width: 60%;
+}
+.hero-profile-image {
+  justify-content: flex-start;
+  bottom: 0;
+  width: 40%;
+  height: 100vh;
+}
+.hero-profile-image img {
+  width: 97%;
+  margin-right: 60px;
+  margin-top: 19%;
+  min-width: 300px;
+}
+
+/* hero-section text */
+.hero-text {
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  margin-top: 10%;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  display: block;
+}
+.hero-description {
+  font-weight: 400;
+  font-size: 20px;
+}
+.name-developer {
+  color: var(--main-yelow-color);
+}
+/* hero-section text */
+
+@media only screen and (max-width: 768px) {
+  .herosection {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero-profile-image {
+    display: none; /* Hide the image on mobile */
+  }
+}
