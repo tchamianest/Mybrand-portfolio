@@ -186,10 +186,11 @@ footer {
   font-size: 16px;
   color: white;
 }
-.right-footer section:focus {
+
+.right-footer select:focus {
   border: none;
 }
-.right-footer section option:focus {
+.right-footer select option:focus {
   border: none;
 }
 @media only screen and (max-width: 406px) {
@@ -227,6 +228,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 0;
   }
   footer {
     padding: 0;
@@ -249,6 +251,9 @@ footer {
     margin-bottom: 60px;
   }
   .pages-footer {
-    margin-left: 100px;
+    margin-left: 50px;
+  }
+  .right-footer select {
+    width: 170px;
   }
 }

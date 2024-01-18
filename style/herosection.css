@@ -159,9 +159,6 @@
   font-weight: 600;
   line-height: 30px;
 }
-nav {
-  opacity: 1;
-}
 
 @media only screen and (max-width: 769px) {
   .hero-text {

@@ -4,6 +4,8 @@
 
 .block {
   display: block;
+  text-align: start;
+  padding-left: 20px;
 }
 
 .right-section {
@@ -13,16 +15,16 @@
 .button-login {
   background-color: transparent;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .button-login button {
   background-color: transparent;
-  width: 100%;
+  width: 30%;
   height: 60px;
-  margin-top: 90px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   cursor: pointer;
   color: white;
   background-color: var(--main-yelow-color);
@@ -47,6 +49,7 @@
   margin-bottom: 50px;
   flex-direction: column;
 }
+
 .form-contact input {
   flex: 1;
   margin-left: 20px;
@@ -59,4 +62,17 @@
 
 .top-pad {
   margin-top: 30px;
+  width: 40%;
+}
+.review {
+  margin-top: 0;
+}
+@media only screen and (max-width: 700px) {
+  .button-login button {
+    width: 100%;
+  }
+  .top-pad {
+    margin-top: 30px;
+    width: 70%;
+  }
 }
