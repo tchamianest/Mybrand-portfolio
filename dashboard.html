@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/dashbord-general.css" />
+    <link rel="stylesheet" href="style/body-dash.css" />
+    <link rel="stylesheet" href="style/chart-bar.css" />
+
+    <script type="text/javascript">
+      window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer", {
+          title: {
+            text: "Top Oil Reserves",
+          },
+          data: [
+            {
+              dataPoints: [
+                { x: 1, y: 297571, label: "Venezuela" },
+                { x: 2, y: 267017, label: "Saudi" },
+                { x: 3, y: 175200, label: "Canada" },
+                { x: 4, y: 154580, label: "Iran" },
+                { x: 5, y: 116000, label: "Russia" },
+                { x: 6, y: 97800, label: "UAE" },
+                { x: 7, y: 20682, label: "US" },
+                { x: 8, y: 20350, label: "China" },
+              ],
+            },
+          ],
+        });
+
+        chart.render();
+      };
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.canvasjs.com/canvasjs.min.js"
+    ></script>
+  </head>
+  <body>
+    <div class="dash-container">
+      <div class="body-dashbord">
+        <p>Dashboard</p>
+        <div class="right-scrol">
+          <div class="header-button">
+            <div class="button btn-1">
+              <img src="imagess/icons/user.png" />
+              <div class="number-dash">
+                <h1>Visitors</h1>
+                <p>1,231</p>
+              </div>
+            </div>
+            <div class="button btn-2">
+              <img src="imagess/icons/sub-vector.png" />
+              <div class="number-dash">
+                <h1>Subscribes</h1>
+                <p>231</p>
+              </div>
+            </div>
+            <div class="button btn-3">
+              <img src="imagess/icons/writen-blog.png" />
+              <div class="number-dash">
+                <h1>Blogs</h1>
+                <p>11</p>
+              </div>
+            </div>
+          </div>
+          <div class="chart-container">
+            <div class="cicle"></div>
+            <div id="chartContainer"></div>
+          </div>
+        </div>
+      </div>
+      <header class="header-dash">
+        <div class="left-dash-header">
+          <div class="left-content dash-pad">
+            <p class="top-header-text">Ready Dashboard</p>
+          </div>
+          <div class="left-content">
+            <div class="admin-profile">
+              <img src="imagess/profile.png" />
+              <div class="name-profile">
+                <p class="name">Ernest</p>
+                <p class="admin">Administrator</p>
+              </div>
+            </div>
+          </div>
+          <div class="left-content">
+            <div class="left-buton">
+              <img src="imagess/icons/dashboard.png" />
+              <p>Dashboard</p>
+              <div class="number-notification">4</div>
+            </div>
+          </div>
+          <div class="left-content">
+            <div class="left-buton">
+              <img src="imagess/icons/component.png" />
+              <p>Components</p>
+              <div class="number-notification">8</div>
+            </div>
+          </div>
+          <div class="left-content">
+            <div class="left-buton">
+              <img src="imagess/icons/form.png" />
+              <p>Form</p>
+              <div class="number-notification">2</div>
+            </div>
+          </div>
+          <div class="left-content">
+            <div class="left-buton">
+              <img src="imagess/icons/notification.png" />
+              <p>Notification</p>
+              <div class="number-notification">4</div>
+            </div>
+          </div>
+          <div class="left-content">
+            <div class="left-buton">
+              <img src="imagess/icons/blogs.png" />
+              <p>Blogs +</p>
+              <div class="number-notification">4</div>
+            </div>
+          </div>
+          <div class="left-content">
+            <div class="left-buton">
+              <img src="imagess/icons/subscribtion.png" />
+              <p>Subscription</p>
+              <div class="number-notification">4</div>
+            </div>
+          </div>
+        </div>
+        <div class="right-dash-header">
+          <input type="text" placeholder="Search Any Options ..." />
+          <div class="admin-profile">
+            <img src="imagess/profile.png" />
+            <div class="name-profile">
+              <p class="name">Ernest</p>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
