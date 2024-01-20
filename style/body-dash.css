@@ -1,13 +1,21 @@
 .body-dashbord {
-  position: fixed;
-  left: 25%;
-  top: 19%;
-  width: 80%;
+  flex: 1;
+  background-color: transparent;
+}
+.first-page {
   min-height: 100vh;
-  overflow: scroll;
+}
+.dash-pad {
+  background-color: transparent;
+  flex: 1;
+  border-bottom: 2px solid rgb(130, 130, 130);
+  padding: 20px;
+  min-width: 240px;
+  height: 6%;
+  margin-bottom: 10px;
 }
 
-.body-dashbord p {
+.first-page p {
   color: #4f4747;
   text-align: left;
   font-family: Syne;
@@ -20,8 +28,11 @@
 }
 .right-scrol {
   overflow: scroll;
+  height: 100vh;
 }
-
+.right-scrol::-webkit-scrollbar {
+  display: none;
+}
 .right-scrol::-webkit-scrollbar {
   height: 0;
   width: 0;
@@ -37,7 +48,7 @@
   width: 27%;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   padding: 10px;
 }
 .btn-1 {
@@ -51,21 +62,24 @@
 }
 .button img {
   background-color: transparent;
-  height: 60px;
+  height: 30px;
 }
 .number-dash p {
   background-color: transparent;
   color: white;
+  font-size: 20px;
+  margin: 0;
 }
 .number-dash {
   background-color: transparent;
 }
 .number-dash h1 {
   color: #fff;
-  font-family: Inter;
-  font-size: 36px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   background-color: transparent;
+  margin: 0;
+  padding: 0;
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,74 +13,24 @@
     <link rel="stylesheet" href="style/dashbord-general.css" />
     <link rel="stylesheet" href="style/body-dash.css" />
     <link rel="stylesheet" href="style/chart-bar.css" />
-
-    <script type="text/javascript">
-      window.onload = function () {
-        var chart = new CanvasJS.Chart("chartContainer", {
-          title: {
-            text: "Top Oil Reserves",
-          },
-          data: [
-            {
-              dataPoints: [
-                { x: 1, y: 297571, label: "Venezuela" },
-                { x: 2, y: 267017, label: "Saudi" },
-                { x: 3, y: 175200, label: "Canada" },
-                { x: 4, y: 154580, label: "Iran" },
-                { x: 5, y: 116000, label: "Russia" },
-                { x: 6, y: 97800, label: "UAE" },
-                { x: 7, y: 20682, label: "US" },
-                { x: 8, y: 20350, label: "China" },
-              ],
-            },
-          ],
-        });
-
-        chart.render();
-      };
-    </script>
+    <link rel="stylesheet" href="style/components.css" />
+    <link rel="stylesheet" href="style/dash-form.css" />
     <script
       type="text/javascript"
-      src="https://cdn.canvasjs.com/canvasjs.min.js"
+      src="https://www.gstatic.com/charts/loader.js"
     ></script>
+    <script src="javascript/chat2.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="javascript/chartbar.js"></script>
   </head>
   <body>
     <div class="dash-container">
-      <div class="body-dashbord">
-        <p>Dashboard</p>
-        <div class="right-scrol">
-          <div class="header-button">
-            <div class="button btn-1">
-              <img src="imagess/icons/user.png" />
-              <div class="number-dash">
-                <h1>Visitors</h1>
-                <p>1,231</p>
-              </div>
-            </div>
-            <div class="button btn-2">
-              <img src="imagess/icons/sub-vector.png" />
-              <div class="number-dash">
-                <h1>Subscribes</h1>
-                <p>231</p>
-              </div>
-            </div>
-            <div class="button btn-3">
-              <img src="imagess/icons/writen-blog.png" />
-              <div class="number-dash">
-                <h1>Blogs</h1>
-                <p>11</p>
-              </div>
-            </div>
-          </div>
-          <div class="chart-container">
-            <div class="cicle"></div>
-            <div id="chartContainer"></div>
-          </div>
-        </div>
-      </div>
       <header class="header-dash">
         <div class="left-dash-header">
-          <div class="left-content dash-pad">
+          <div class="dash-pad">
             <p class="top-header-text">Ready Dashboard</p>
           </div>
           <div class="left-content">
@@ -135,11 +86,100 @@
           </div>
         </div>
         <div class="right-dash-header">
-          <input type="text" placeholder="Search Any Options ..." />
-          <div class="admin-profile">
-            <img src="imagess/profile.png" />
-            <div class="name-profile">
-              <p class="name">Ernest</p>
+          <div class="headre-right">
+            <input type="text" placeholder="Search Any Options ..." />
+            <div class="admin-profile">
+              <img src="imagess/profile.png" />
+              <div class="name-profile">
+                <p class="name">Ernest</p>
+              </div>
+            </div>
+          </div>
+          <div class="body-dashbord">
+            <div class="right-scrol">
+              <div class="first-page">
+                <p>Dashboard</p>
+                <div class="header-button">
+                  <div class="button btn-1">
+                    <img src="imagess/icons/user.png" />
+                    <div class="number-dash">
+                      <h1>Visitors</h1>
+                      <p>1,231</p>
+                    </div>
+                  </div>
+                  <div class="button btn-2">
+                    <img src="imagess/icons/sub-vector.png" />
+                    <div class="number-dash">
+                      <h1>Subscribes</h1>
+                      <p>231</p>
+                    </div>
+                  </div>
+                  <div class="button btn-3">
+                    <img src="imagess/icons/writen-blog.png" />
+                    <div class="number-dash">
+                      <h1>Blogs</h1>
+                      <p>11</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="chart-container">
+                  <div class="cicle">
+                    <div id="piechart_3d"></div>
+                  </div>
+                  <div class="chart">
+                    <div id="columnchart_material"></div>
+                    <script></script>
+                  </div>
+                </div>
+              </div>
+              <div class="first-page">
+                <p>components</p>
+                <div class="contain">
+                  <div class="components-conatiner">
+                    <div class="components-row">
+                      <p>Top-header</p>
+                      <button>background-color</button>
+                    </div>
+                    <div class="components-row">
+                      <p>body-section</p>
+                      <button>background-color</button>
+                    </div>
+                    <div class="components-row">
+                      <p>Footer</p>
+                      <button>background-color</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="first-page">
+                <p>form</p>
+                <div class="contain">
+                  <div class="form-container">
+                    <div class="form-left">
+                      <div class="form-line">
+                        <p>name :</p>
+                        <input type="text" />
+                      </div>
+                    </div>
+                    <div class="form-guide">
+                      <p class="form-header">guidelines</p>
+                      <p class="form-description">
+                        Here manage the form to show the new visitor who need to
+                        subscribe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="first-page">
+                <p>Notification</p>
+              </div>
+              <div class="first-page">
+                <p>blogs +</p>
+              </div>
+              <div class="first-page">
+                <p>Subscription</p>
+              </div>
             </div>
           </div>
         </div>

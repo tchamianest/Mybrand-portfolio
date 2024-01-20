@@ -40,8 +40,7 @@
   background-color: var(--main-header-color);
   padding-top: 30px;
 }
-
-.right-dash-header {
+.headre-right {
   flex: 1;
   background-color: var(--main-header-color);
   height: 70px;
@@ -51,13 +50,19 @@
   justify-content: flex-end;
   padding-right: 8%;
 }
+
+.right-dash-header {
+  width: 80%;
+  gap: 20px;
+}
+
 .left-content {
   background-color: transparent;
   flex: 1;
   border-bottom: 2px solid rgb(130, 130, 130);
   padding: 20px;
   min-width: 240px;
-  height: 5%;
+  height: 3%;
 }
 .top-header-text {
   background-color: transparent;
@@ -73,7 +78,7 @@
   display: flex;
   justify-content: space-between;
   background-color: transparent;
-  height: 40px;
+  height: 100%;
   gap: 30px;
 }
 .admin-profile img {
@@ -116,14 +121,14 @@
   padding-right: 20px;
 }
 .left-buton img {
-  width: 10%;
+  width: 6%;
   background-color: transparent;
 }
 
 .left-buton p {
   color: white;
   font-family: Syne;
-  font-size: 32px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 500;
   line-height: 130%;
@@ -135,11 +140,11 @@
   cursor: pointer;
 }
 .number-notification {
-  width: 40px;
+  width: 30px;
   text-wrap: 0;
   text-align: center;
   padding: 3px;
-  font-size: 15px;
+  font-size: 10px;
   padding-bottom: 10px;
   color: white;
   background-color: transparent;

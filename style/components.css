@@ -1,0 +1,51 @@
+.components-conatiner {
+  width: 90%;
+  margin-top: 7%;
+  background-color: var(--main-header-color);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  border-radius: 10px;
+}
+.contain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.components-row {
+  display: flex;
+  background-color: #333333;
+  border-radius: 10px;
+  padding: 30px;
+  width: 80%;
+  align-items: center;
+}
+.components-row p {
+  width: 70%;
+  color: white;
+  background-color: transparent;
+  text-transform: none;
+  font-size: 20px;
+  text-align: center;
+}
+.components-row button {
+  cursor: pointer;
+  background-color: #946800;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.components-row button:hover {
+  background-color: #5a3f01;
+}
