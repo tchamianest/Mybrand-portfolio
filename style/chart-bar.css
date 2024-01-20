@@ -1,0 +1,18 @@
+.chart-container {
+  margin-top: 3%;
+  display: flex;
+  padding-left: 50px;
+  padding-right: 3%;
+  gap: 40px;
+}
+.cicle {
+  width: 30%;
+  background-color: aqua;
+}
+
+#chartContainer {
+  flex: 1;
+  margin-right: 4%;
+  height: 300px;
+  width: 100%;
+}

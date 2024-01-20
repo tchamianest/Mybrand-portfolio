@@ -59,6 +59,20 @@
   max-width: 1920px;
 }
 
+.like-blog {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: 5px;
+  padding-top: 7px;
+  font-weight: 700;
+}
+.like-blog p {
+  font-size: 20px;
+  color: var(--main-yelow-color);
+  padding: 0;
+}
+
 @media only screen and (max-width: 800px) {
   .blog-description {
     line-height: 8px;
