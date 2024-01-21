@@ -1,0 +1,32 @@
+.table-sub {
+  width: 90%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.table-sub {
+  margin-top: 40px;
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+
+th,
+td {
+  color: white;
+  border: 1px solid white;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #313131;
+}
+
+th:last-child {
+  width: 30%;
+}

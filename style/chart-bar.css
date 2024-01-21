@@ -3,16 +3,26 @@
   display: flex;
   padding-left: 50px;
   padding-right: 3%;
+  background-color: transparent;
   gap: 40px;
 }
 .cicle {
-  width: 30%;
-  background-color: aqua;
+  width: 29%;
+  background-color: transparent;
 }
-
-#chartContainer {
-  flex: 1;
-  margin-right: 4%;
-  height: 300px;
+.chart {
+  background-color: transparent;
+  width: 63%;
+  height: 500px;
+  padding-left: 2%;
+}
+#columnchart_material {
+  background-color: #4f4747;
   width: 100%;
+  height: 400px;
+}
+#piechart_3d {
+  width: 100%;
+  height: cover;
+  color: #dcdcdc;
 }
