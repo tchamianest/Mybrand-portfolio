@@ -120,6 +120,16 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+.left-buton a {
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: transparent;
+  text-decoration: none;
+}
+.active {
+  color: #a6a001;
+}
 .left-buton img {
   width: 6%;
   background-color: transparent;
