@@ -27,7 +27,7 @@
   padding-left: 3%;
 }
 .right-scrol {
-  overflow: scroll;
+  overflow: hidden;
   height: 100vh;
 }
 .right-scrol::-webkit-scrollbar {
