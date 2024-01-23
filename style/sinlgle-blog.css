@@ -206,11 +206,12 @@
 .one-comments .photo {
   background-color: aliceblue;
   border-radius: 50%;
+  width: 60px;
 }
 .one-comments .photo img {
   background-color: transparent;
   border-radius: 50%;
-  width: 50px;
+  width: 60px;
 }
 
 .one-comments .text-comm {
