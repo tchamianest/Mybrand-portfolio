@@ -18,10 +18,14 @@
   align-items: flex-end;
   justify-content: flex-end;
 }
-
-.button-login button {
+.button-login a {
+  width: 40%;
+  padding: 0;
   background-color: transparent;
-  width: 30%;
+}
+.button-login .button12 {
+  background-color: transparent;
+  width: 180px;
   height: 60px;
   margin-top: 30px;
   margin-bottom: 40px;
