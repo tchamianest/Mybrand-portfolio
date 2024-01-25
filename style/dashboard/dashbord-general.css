@@ -33,7 +33,7 @@
 
 .left-dash-header {
   padding: 10px;
-  min-width: 360px;
+  /* min-width: 360px; */
   width: 23%;
   height: 100vh;
   min-height: 600px;
@@ -61,7 +61,7 @@
   flex: 1;
   border-bottom: 2px solid rgb(130, 130, 130);
   padding: 20px;
-  min-width: 240px;
+  /* min-width: 240px; */
   height: 3%;
 }
 .top-header-text {
@@ -121,11 +121,13 @@
   padding-right: 20px;
 }
 .left-buton a {
+  flex: 1;
   padding: 10px;
   padding-left: 30px;
   padding-right: 30px;
   background-color: transparent;
   text-decoration: none;
+  text-align: left;
 }
 .active {
   color: #a6a001;
@@ -175,4 +177,58 @@
   text-align: center;
   font-size: 20px;
   color: rgb(145, 145, 145);
+}
+.headre-right .menu-dash {
+  display: none;
+}
+@media only screen and (max-width: 1450px) {
+  .top-header-text {
+    font-size: 23px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .left-dash-header {
+    width: 30%;
+  }
+  .left-content {
+    min-width: 100px;
+  }
+  .top-header-text {
+    font-size: 20px;
+  }
+  .left-buton a p {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .left-dash-header {
+    display: none;
+  }
+  .right-dash-header {
+    width: 100%;
+  }
+
+  .admin-profile {
+    align-items: center;
+    gap: 10px;
+  }
+  .admin-profile img {
+    height: 40px;
+    margin-left: 1%;
+    border-radius: 50%;
+  }
+  .name {
+    background-color: transparent;
+    font-size: 10px;
+  }
+  .headre-right {
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .header-dash .menu-dash {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
 }

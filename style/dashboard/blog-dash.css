@@ -109,3 +109,31 @@
   border-radius: 10px;
   border: none;
 }
+
+@media only screen and (max-width: 720px) {
+  .store-two {
+    margin-top: 30px;
+    flex-direction: column;
+
+    gap: 30px;
+  }
+  .blog-update {
+    width: 91%;
+  }
+  .create-new {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+  .text-not p {
+    font-size: 9px;
+  }
+  .text-not button {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

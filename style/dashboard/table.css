@@ -30,3 +30,11 @@ th {
 th:last-child {
   width: 30%;
 }
+@media only screen and (max-width: 720px) {
+  .table-sub {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}

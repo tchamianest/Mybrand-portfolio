@@ -82,3 +82,49 @@
   margin: 0;
   padding: 0;
 }
+
+@media only screen and (max-width: 720px) {
+  .header-button {
+    min-width: 340px;
+    padding-left: 0px;
+  }
+  .right-scrol {
+    overflow: scroll;
+    height: 100vh;
+  }
+  .first-page p {
+    align-items: center;
+    text-align: center;
+  }
+  .number-dash p {
+    font-size: 10px;
+  }
+
+  .number-dash h1 {
+    font-size: 16px;
+  }
+  .header-button {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+  }
+  .button {
+    width: 19%;
+    gap: 3px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-button {
+    min-width: 340px;
+    padding-left: 0px;
+  }
+  .button {
+    align-items: center;
+    justify-content: center;
+  }
+  .button img {
+    display: none;
+  }
+}

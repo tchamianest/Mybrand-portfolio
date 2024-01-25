@@ -60,3 +60,23 @@
 .delete:hover {
   background-color: #6a1218;
 }
+
+@media only screen and (max-width: 720px) {
+  .one-chart .button {
+    justify-content: center;
+    gap: 20px;
+  }
+  .notification-container {
+    margin-bottom: 40px;
+  }
+
+  .one-chart .decription-notif {
+    margin-left: 0px;
+    color: #c5bebe;
+    font-size: 16px;
+    text-align: center;
+  }
+  .one-chart {
+    padding: 20px;
+  }
+}

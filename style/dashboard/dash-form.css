@@ -101,3 +101,12 @@
   text-transform: uppercase;
   background-color: transparent;
 }
+
+@media only screen and (max-width: 720px) {
+  .form-guide {
+    display: none;
+  }
+  .form-left {
+    width: 100%;
+  }
+}
