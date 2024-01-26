@@ -110,6 +110,15 @@
   font-weight: 400;
   line-height: 130%; /* 20.8px */
 }
+.button-submit {
+  background-color: #a6a001;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+}
+.button-submit:hover {
+  background-color: #615d01;
+}
 
 /* the container button */
 .left-buton {
