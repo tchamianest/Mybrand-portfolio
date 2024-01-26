@@ -28,6 +28,16 @@
       src="https://www.gstatic.com/charts/loader.js"
     ></script>
     <script src="javascript/chartbar.js"></script>
+    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+      window.onload = () => {
+        CKEDITOR.replace("editor1");
+      };
+
+      function sendText() {
+        window.parent.postMessage(CKEDITOR.instances.CK1.getData(), "*");
+      }
+    </script>
   </head>
   <body>
     <div class="dash-container">
@@ -302,7 +312,11 @@
                       </div>
                     </div>
                     <div class="create-new">
-                      <p>blogs-create</p>
+                      <textarea name="editor1" id="CK1"></textarea>
+                      <br>
+                      <button class="button button-submit" onclick="sendText()">Submit text</button>
+                      
+                      <!-- <p>blogs-create</p>
                       <div class="form-left blogsjs">
                         <div class="form-blog-create">
                           <p>Title:</p>
@@ -334,7 +348,7 @@
                         </div>
                         <div class="add-form">
                           <button class="">+ add</button>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                   </div>
