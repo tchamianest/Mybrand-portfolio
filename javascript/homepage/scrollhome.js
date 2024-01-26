@@ -6,14 +6,14 @@ navconatinre.forEach((el) => {
     if (el.children[0].innerHTML === "Login ") {
       window.location.href = "login.html";
     } else {
-      console.log(el.children[0]);
+      // console.log(el.children[0]);
       event.preventDefault();
       navconatinre.forEach((link) => {
         link.children[0].classList.add("color-tex");
         link.children[0].classList.remove("active-dash");
       });
 
-      console.log(el.children[0].innerHTML);
+      // console.log(el.children[0].innerHTML);
 
       el.children[0].classList.remove("color-tex");
       el.children[0].classList.add("active-dash");

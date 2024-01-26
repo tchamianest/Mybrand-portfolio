@@ -1,22 +1,27 @@
+* {
+  background-color: var(--main-header-color);
+}
+
 .blog-page-container {
   background-color: transparent;
   display: flex;
-  width: 100%;
+  width: 90%;
   align-items: center;
   justify-content: center;
   background-color: transparent;
   max-width: 1920px;
   padding-left: 8%;
   padding-right: 8%;
-
-  padding-top: 2%;
-  padding-bottom: 2%;
-  overflow: scroll;
+  overflow-x: auto;
+  border-radius: 20px;
   gap: 30px;
+}
+.start-blog {
+  margin-left: 1500px;
 }
 
 .blog-page-container::-webkit-scrollbar {
-  height: 6px;
+  height: 2px;
   width: 100%;
   scrollbar-color: var(--main-header-color);
 }
@@ -37,14 +42,37 @@
 
 .center {
   display: flex;
-  width: 100%;
+  padding: 10%;
+  width: 90%;
   background-color: transparent;
   justify-content: center;
   align-items: center;
-  background-color: var(--main-header-color);
+  background-color: rgb(51, 51, 51);
   margin-bottom: 70px;
+  border-radius: 50px;
 }
-
+/* buttton */
+.button-right,
+.button-left {
+  cursor: pointer;
+  gap: 40px;
+  color: white;
+  background-color: rgb(40, 40, 40);
+  margin-right: 40px;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 30%;
+  transition: 0.3s;
+}
+.button-left:hover,
+.button-right:hover {
+  background-color: #a6a001;
+}
+.button-right {
+  margin-left: 40px;
+}
+/* buttton */
 /* full text blog with photo */
 .blog-full-text {
   background-color: transparent;
