@@ -20,3 +20,20 @@
   box-sizing: border-box;
   overflow: hidden;
 }
+
+.color-tex {
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.active-dash {
+  color: #a6a001;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}

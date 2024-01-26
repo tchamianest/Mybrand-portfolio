@@ -110,6 +110,11 @@
   border: none;
 }
 
+/* .active-link  styling */
+.active-link {
+  color: #a6a001;
+}
+
 @media only screen and (max-width: 720px) {
   .store-two {
     margin-top: 30px;

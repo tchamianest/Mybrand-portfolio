@@ -137,8 +137,18 @@
   background-color: transparent;
 }
 
-.left-buton p {
+.left-buton .color-tex {
   color: white;
+  font-family: Syne;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+  background-color: transparent;
+  transition: 0.2s;
+}
+.active-dash {
+  color: #a6a001;
   font-family: Syne;
   font-size: 22px;
   font-style: normal;
