@@ -76,6 +76,12 @@
 }
 
 @media only screen and (max-width: 890px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card-portifolio {
+    border-radius: 10px;
+  }
   .card-text-head {
     font-size: 16px;
     margin-bottom: 5px;
@@ -92,7 +98,7 @@
 /* /////Small devices  */
 @media only screen and (max-width: 560px) {
   .card-text-description {
-    display: none;
+    display: block;
   }
 }
 
