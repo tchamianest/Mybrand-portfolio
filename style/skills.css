@@ -88,7 +88,7 @@
   }
   .skills-container {
     height: 200px;
-    width: 200px;
+    width: 90%;
     margin-bottom: 20px;
     margin-right: 0px;
   }
@@ -109,12 +109,22 @@
     margin-top: 60px;
   }
 }
-
+@media only screen and (max-width: 692px) {
+  .skills-container {
+    width: 100%;
+  }
+  .skills-three {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
 /* /////Small devices  */
 @media only screen and (max-width: 500px) {
   .skills-container {
     height: 260px;
-    width: 200px;
+    width: 100%;
     margin-bottom: 20px;
     margin-left: 0px;
   }
