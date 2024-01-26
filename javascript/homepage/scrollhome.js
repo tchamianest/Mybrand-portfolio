@@ -1,8 +1,11 @@
 const navconatinre = document.querySelectorAll("li");
 console.log(navconatinre);
 navconatinre.forEach((el) => {
-  if (el.children[0].innerHTML !== "Login") {
-    el.addEventListener("click", function (event) {
+  el.addEventListener("click", function (event) {
+    // IF IT IS THE LOGIN LINK I NEED TO GO TO OTHER PAGES
+    if (el.children[0].innerHTML === "Login ") {
+      window.location.href = "login.html";
+    } else {
       console.log(el.children[0]);
       event.preventDefault();
       navconatinre.forEach((link) => {
@@ -20,6 +23,6 @@ navconatinre.forEach((el) => {
       const sectioncordinate = document.getElementById(targetsection);
 
       sectioncordinate.scrollIntoView({ behavior: "smooth" });
-    });
-  }
+    }
+  });
 });
