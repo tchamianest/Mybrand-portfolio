@@ -35,13 +35,11 @@
   background-color: transparent;
   border-radius: 20px;
 }
-.start-blog {
-  margin-left: 1800px;
-}
+
 .blogs-with-button {
   border-radius: 15px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   max-width: fit-content;
   gap: 10px;

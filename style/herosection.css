@@ -3,7 +3,21 @@
   align-items: center;
   justify-content: center;
 }
-
+.hero-social-media {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 28px;
+  font-style: normal;
+  margin-bottom: 0px;
+  font-weight: 700;
+  line-height: 40px; /* 40.32px */
+  text-transform: uppercase;
+  color: var(--main-yelow-color);
+}
+.hero-social-media a img {
+  width: 35px;
+  border-radius: 46px;
+}
 .hero-section {
   padding-left: 8%;
   padding-right: 8%;
@@ -191,6 +205,11 @@
 /* mobile View  */
 @media only screen and (max-width: 700px) {
   /* hero secction */
+  .hero-social-media {
+    text-align: center;
+    font-size: 22px;
+  }
+
   .col-2 {
     display: none;
     width: 0;
