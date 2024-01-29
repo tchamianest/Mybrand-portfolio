@@ -297,18 +297,25 @@
           <div class="right-section">
             <div class="form-right">
               <p class="title-form">Name   :</p>
-              <input type="text" class="input-name"/>
+              <div class="input-erro">
+                <input id="name-input" type="text" class="input-name"/>
+                <div class="validation-message-name">⚠️You reach maximum name</div>
+              </div>
+             
             </div>
             <div class="form-right">
               <p class="title-form">Email   :</p>
-              <input type="email" class="input-name"/>
+              <div class="input-erro">
+                <input id="email-validation" type="email" class="input-name"/>
+                <div class="validation-message-email">⚠️You reach maximum name</div>
+              </div>
             </div>
             <div class="form-right">
               <p class="title-form">Message :</p>
               <textarea class="longText" name="longText" rows="4" cols="49"></textarea>
             </div>
             <div class=" button-form">
-              <button  >Submitt</button>
+              <button id="submitt-contact"  >Submitt</button>
             </div>
             <div class="socila-hide">
               <p class="title-contact">SOCIAL MEDIA :</p>
@@ -381,11 +388,12 @@
     </div>
     <script src="javascript/blogd/home.js"></script>
     <script src="javascript/homepage/scrollhome.js"></script>
+    <script src="javascript/form/varidation.js"></script>
 
     <script >
         var menulist=document.querySelector(".menu-list-java");
         const navbar=document.querySelector('nav');
-        console.log(navbar)
+        // console.log(navbar)
         menulist.style.maxHeight="0px";
         navbar.style.opacity="1";
         function Toggle(){

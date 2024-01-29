@@ -55,27 +55,29 @@
             <div class="right-section top-pad">
               <div class="form-contact">
                 <p class="title-form block">Email:</p>
-                <input
-                  type="text"
-                  class="input-name"
-                  placeholder="Enter Admin Email"
-                />
+                <div class="input-erro">
+                  <input id="email-validation" placeholder="Enter Email" type="email" class="input-name"/>
+                  <div class="validation-message-email">⚠️You reach maximum name</div>
+                </div>
               </div>
               <div class="form-contact">
                 <p class="title-form block">Password:</p>
-                <input
+                <div class="input-erro">
+                  <input
                   type="password"
                   name="password"
                   maxlength="8"
                   minlength="6"
                   placeholder="Enter different 8 char"
+                  id="input-password"
                   class="input-name"
                 />
+                  <div class="validation-message-password">⚠️You reach maximum name</div>
+                </div>
+                
               </div>
               <div class="button-login">
-                <a href="dashboard.html">
-                  <button class="button12">Login</button>
-                </a>
+                  <button id="login-button-in" class="button12">Login</button>        
               </div>
             </div>
           </div>
@@ -149,6 +151,7 @@
         </div>
       </footer>
     </div>
+    <script src="javascript/form/login-form.js"></script>
     <script>
       var menulist = document.querySelector(".menu-list-java");
       const navbar = document.querySelector("nav");

@@ -1,5 +1,5 @@
 const navconatinre = document.querySelectorAll("li");
-console.log(navconatinre);
+
 navconatinre.forEach((el) => {
   el.addEventListener("click", function (event) {
     /// change based on the position
