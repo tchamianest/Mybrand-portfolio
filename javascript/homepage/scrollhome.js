@@ -2,6 +2,11 @@ const navconatinre = document.querySelectorAll("li");
 console.log(navconatinre);
 navconatinre.forEach((el) => {
   el.addEventListener("click", function (event) {
+    /// change based on the position
+    const rect = el.getClientRects();
+    // const { top, bottom } = (rect.top, rect.bottom);
+    // console.log("Top:", rect.top, bottom);
+
     // IF IT IS THE LOGIN LINK I NEED TO GO TO OTHER PAGES
     if (el.children[0].innerHTML === "Login ") {
       window.location.href = "login.html";
@@ -26,3 +31,9 @@ navconatinre.forEach((el) => {
     }
   });
 });
+
+// check the position for the bound
+const baoundary = document.getElementById("skills-section");
+
+const bound = baoundary.getClientRects();
+console.log(bound);
