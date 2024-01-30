@@ -23,10 +23,12 @@ login_button.addEventListener("click", function (e) {
     email_valid("block", " Put Valid email Please");
   } else if (password !== Number(password_doc.value)) {
     varid = false;
+    email_valid("none", "");
     pass_valid("block", " Put Valid Password");
   } else {
     varid = true;
     pass_valid("none", "");
+    email_valid("none", "");
     window.location.href = "dashboard.html";
   }
 });

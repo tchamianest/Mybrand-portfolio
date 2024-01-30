@@ -161,8 +161,8 @@
             </div>
           </div>
           <div class="comments-container">
-            <div class="comments">
-              <div class="one-comments">
+            <div id="comments-adder" class="comments">
+              <!-- <div class="one-comments">
                 <div class="photo">
                   <img src="imagess/uknown user.png" />
                 </div>
@@ -208,19 +208,20 @@
                   <p class="name">unknown</p>
                   <p class="comments-descr">nice picture of blog 👌👌👌</p>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="add-comments">
               <p class="add-title-com">Add New Comments</p>
               <div class="add-com">
                 <textarea
+                  id="comments--inputs"
                   class="longText"
                   name="longText"
                   placeholder="Enter the comments on Blog ..."
                   rows="10"
                   cols="49"
                 ></textarea>
-                <button>Comments >></button>
+                <button id="comments-button">Comments >></button>
               </div>
             </div>
           </div>
@@ -374,6 +375,7 @@
       </footer>
     </div>
     <script src="javascript/blogd/blog.js"></script>
+    <script src="javascript/blogd/comments.js"></script>
     <script>
       var menulist = document.querySelector(".menu-list-java");
       const navbar = document.querySelector("nav");
