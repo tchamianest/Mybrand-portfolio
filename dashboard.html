@@ -30,13 +30,7 @@
     <script src="javascript/chartbar.js"></script>
     <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
     <script type="text/javascript">
-      window.onload = () => {
-        CKEDITOR.replace("editor1");
-      };
-
-      function sendText() {
-        window.parent.postMessage(CKEDITOR.instances.CK1.getData(), "*");
-      }
+      
     </script>
   </head>
   <body>
@@ -79,7 +73,7 @@
             <div class="left-buton">
               <img src="imagess/icons/notification.png" />
               <a href="#notification">
-                <p class="color-tex">Notification</p>
+                <p class="color-tex">Messages</p>
               </a>
               <div class="number-notification">4</div>
             </div>
@@ -125,21 +119,21 @@
                   <div class="button btn-1">
                     <img src="imagess/icons/user.png" />
                     <div class="number-dash">
-                      <h1>Visitors</h1>
-                      <p>1,231</p>
+                      <h1>Comments</h1>
+                      <p>231</p>
                     </div>
                   </div>
                   <div class="button btn-2">
                     <img src="imagess/icons/sub-vector.png" />
                     <div class="number-dash">
-                      <h1>Subscribes</h1>
-                      <p>231</p>
+                      <h1>Messages</h1>
+                      <p>21</p>
                     </div>
                   </div>
                   <div class="button btn-3">
                     <img src="imagess/icons/writen-blog.png" />
                     <div class="number-dash">
-                      <h1>Blogs</h1>
+                      <h1>Blogs Likes</h1>
                       <p>11</p>
                     </div>
                   </div>
@@ -214,10 +208,10 @@
                 </div>
               </div>
               <div id="notification" class="first-page">
-                <p>Notification</p>
+                <p>Messages ✉️</p>
                 <div class="notification-container">
                   <div class="one-chart">
-                    <p class="header-top">INVITATION ✅</p>
+                    <p class="header-top">Bizimana Serge👱</p>
                     <p class="decription-notif">
                       is simply dummy text of the printing and typesetting
                       industry. Lorem Ipsum has been the industry's standard
@@ -226,12 +220,12 @@
                       specimen book.
                     </p>
                     <div class="button">
-                      <button class="accept">ACCEPT ✅</button>
-                      <button class="delete">DELETE ⛔</button>
+                      <button class="accept">Read ✅</button>
+                      <button class="delete">Reply ⛔</button>
                     </div>
                   </div>
                   <div class="one-chart">
-                    <p class="header-top">MESSAGE ✉️</p>
+                    <p class="header-top">Kalisa Daniel 🙍</p>
                     <p class="decription-notif">
                       is simply dummy text of the printing and typesetting
                       industry. Lorem Ipsum has been the industry's standard
@@ -240,12 +234,12 @@
                       specimen book.
                     </p>
                     <div class="button">
-                      <button class="accept">ACCEPT ✅</button>
-                      <button class="delete">DELETE ⛔</button>
+                      <button class="accept">Read ✅</button>
+                      <button class="delete">Reply ⛔</button>
                     </div>
                   </div>
                   <div class="one-chart">
-                    <p class="header-top">VISITORS 🫂</p>
+                    <p class="header-top">MUkama Sam 🫂</p>
                     <p class="decription-notif">
                       is simply dummy text of the printing and typesetting
                       industry. Lorem Ipsum has been the industry's standard
@@ -254,14 +248,14 @@
                       specimen book.
                     </p>
                     <div class="button">
-                      <button class="accept">ACCEPT ✅</button>
-                      <button class="delete">DELETE ⛔</button>
+                      <button class="accept">Read ✅</button>
+                      <button class="delete">Reply ⛔</button>
                     </div>
                   </div>
                 </div>
               </div>
               <div id="blog" class="first-page">
-                <p>blogs +</p>
+                <p>blogs 📃</p>
                 <div class="blogs-creater">
                   <div class="store-two">
                     <div class="blog-update">
@@ -314,113 +308,79 @@
                     <div class="create-new">
                       <textarea name="editor1" id="CK1"></textarea>
                       <br>
-                      <button class="button button-submit" onclick="sendText()">Submit text</button>
-                      
-                      <!-- <p>blogs-create</p>
-                      <div class="form-left blogsjs">
-                        <div class="form-blog-create">
-                          <p>Title:</p>
-                          <input type="text" />
-                        </div>
-                        <div class="form-blog-create">
-                          <p>Photo :</p>
-                          <form>
-                            <input
-                              class="upload"
-                              type="file"
-                              id="myFile"
-                              name="filename"
-                            />
-                          </form>
-                        </div>
-                        <div class="form-blog-create">
-                          <p>Short description :</p>
-                          <input type="text" />
-                        </div>
-                        <div class="form-blog-create">
-                          <p>Description:</p>
-                          <textarea
-                            class="longText"
-                            name="longText"
-                            rows="4"
-                            cols="49"
-                          ></textarea>
-                        </div>
-                        <div class="add-form">
-                          <button class="">+ add</button>
-                        </div> -->
+                      <button id="submitt-blog" class="button button-submit" >Submit text</button>                     
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div id="subscribes" class="first-page">
-                <p>Subscription</p>
-                <div class="table-sub">
-                  <table>
-                    <tr>
-                      <th>Dates</th>
-                      <th>Name</th>
-                      <th>Email</th>
-                    </tr>
-                    <tr>
-                      <td>January 01 2024</td>
-                      <td>Kalisa daniel</td>
-                      <td>
-                        <a href="mailto:tchamianest@gmail.com"
-                          >tchamianest@gmail.com</a
-                        >
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>January 01 2024</td>
-                      <td>Kalisa daniel</td>
-                      <td>
-                        <a href="mailto:tchamianest@gmail.com"
-                          >tchamianest@gmail.com</a
-                        >
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>January 01 2024</td>
-                      <td>Kalisa daniel</td>
-                      <td>
-                        <a href="mailto:tchamianest@gmail.com"
-                          >tchamianest@gmail.com</a
-                        >
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>January 01 2024</td>
-                      <td>Kalisa daniel</td>
-                      <td><a href="">tchamianest@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                      <td>January 01 2024</td>
-                      <td>Kalisa daniel</td>
-                      <td><a href="">tchamianest@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                      <td>January 01 2024</td>
-                      <td>Kalisa daniel</td>
-                      <td><a href="">tchamianest@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                      <td>January 01 2024</td>
-                      <td>daniel kibasumba</td>
-                      <td><a href="">tchamianest@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                      <td>January 01 2024</td>
-                      <td>Kalisa daniel</td>
-                      <td><a href="">tchamianest@gmail.com</a></td>
-                    </tr>
-                    <tr>
-                      <td>January 01 2024</td>
-                      <td>Kalisa daniel</td>
-                      <td><a href="">tchamianest@gmail.com</a></td>
-                    </tr>
-                  </table>
+                <div id="subscribes" class="first-page">
+                  <p>Subscription</p>
+                  <div class="table-sub">
+                    <table>
+                      <tr>
+                        <th>Dates</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                      </tr>
+                      <tr>
+                        <td>January 01 2024</td>
+                        <td>Kalisa daniel</td>
+                        <td>
+                          <a href="mailto:tchamianest@gmail.com"
+                            >tchamianest@gmail.com</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>January 01 2024</td>
+                        <td>Kalisa daniel</td>
+                        <td>
+                          <a href="mailto:tchamianest@gmail.com"
+                            >tchamianest@gmail.com</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>January 01 2024</td>
+                        <td>Kalisa daniel</td>
+                        <td>
+                          <a href="mailto:tchamianest@gmail.com"
+                            >tchamianest@gmail.com</a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>January 01 2024</td>
+                        <td>Kalisa daniel</td>
+                        <td><a href="">tchamianest@gmail.com</a></td>
+                      </tr>
+                      <tr>
+                        <td>January 01 2024</td>
+                        <td>Kalisa daniel</td>
+                        <td><a href="">tchamianest@gmail.com</a></td>
+                      </tr>
+                      <tr>
+                        <td>January 01 2024</td>
+                        <td>Kalisa daniel</td>
+                        <td><a href="">tchamianest@gmail.com</a></td>
+                      </tr>
+                      <tr>
+                        <td>January 01 2024</td>
+                        <td>daniel kibasumba</td>
+                        <td><a href="">tchamianest@gmail.com</a></td>
+                      </tr>
+                      <tr>
+                        <td>January 01 2024</td>
+                        <td>Kalisa daniel</td>
+                        <td><a href="">tchamianest@gmail.com</a></td>
+                      </tr>
+                      <tr>
+                        <td>January 01 2024</td>
+                        <td>Kalisa daniel</td>
+                        <td><a href="">tchamianest@gmail.com</a></td>
+                      </tr>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -429,5 +389,6 @@
       </header>
     </div>
     <script src="/javascript/dashboard/scroll.js"></script>
+    <script src="/javascript/blogd/uploadnewblog.js"></script>
   </body>
 </html>
