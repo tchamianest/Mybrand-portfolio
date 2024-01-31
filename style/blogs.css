@@ -180,6 +180,17 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .blogs-with-button {
+    border-radius: 0px;
+
+    overflow: cover;
+  }
+  .blog-review {
+    width: 100%;
+
+    min-width: 250px;
+  }
+
   .blog-description {
     display: none;
   }
