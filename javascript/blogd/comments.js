@@ -7,7 +7,7 @@ const comment_info = [
 const comment_container = document.getElementById("comments-adder");
 const comments_input = document.getElementById("comments--inputs");
 const button = document.getElementById("comments-button");
-
+const comments_count = document.getElementById("comments-number");
 /////////////////////////////////////////////////////////////////////////////
 const display = function () {
   comment_container.innerHTML = "";
@@ -25,6 +25,7 @@ const display = function () {
       <p class="comments-descr">${comments}</p>
     </div>
     </div>`;
+    comments_count.innerHTML = comment_info.length;
 
     comment_container.insertAdjacentHTML("afterbegin", template);
   });
@@ -49,4 +50,21 @@ button.addEventListener("click", function (e) {
   comment_info.push(objc);
   //   comment_container.insertAdjacentHTML("afterbegin", template);
   display();
+});
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////IMPLEMENTS THE LIKES
+const like_number = document.getElementById("likes-number");
+const like_img = document.getElementById("like-icons");
+
+let like_counter = 0;
+
+like_img.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (like_img.getAttribute("src") !== "imagess/icons/liked.png") {
+    like_img.setAttribute("src", "imagess/icons/liked.png");
+    like_counter++;
+    like_number.innerHTML = like_counter;
+  }
 });
