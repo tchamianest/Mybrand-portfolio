@@ -1,16 +1,13 @@
 const links = document.querySelectorAll('a[href^="#"]');
 
-console.log(links.hash);
-console.log(links);
-
 links.forEach((el) => {
   el.addEventListener("click", function (event) {
     // prevent defort
     event.preventDefault();
-    console.log(el);
+    // console.log(el);
     const newname = el.hash.slice(1);
 
-    console.log(el.children[0].innerHTML);
+    // console.log(el.children[0].innerHTML);
 
     links.forEach((remo) => {
       /// first remove the color for the first

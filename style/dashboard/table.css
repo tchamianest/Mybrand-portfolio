@@ -1,34 +1,32 @@
 .table-sub {
+  margin-left: 8%;
   width: 90%;
-  text-align: center;
   justify-content: center;
   align-items: center;
-}
-.table-sub {
   margin-top: 40px;
-  text-align: center;
+}
+.texxeditor {
+  width: 90%;
+  display: flex;
 }
 
-table {
-  border-collapse: collapse;
-  width: 80%;
-  margin: auto;
+.rte-fixed .rte-floatpanel-paragraphop {
+  display: none;
 }
 
-th,
-td {
-  color: white;
-  border: 1px solid white;
-  padding: 8px;
-  text-align: center;
-}
-
-th {
-  background-color: #313131;
-}
-
-th:last-child {
+.post-blog {
   width: 30%;
+  background-color: #a6a001;
+  margin-top: 20px;
+  padding: 20px;
+  color: white;
+  font-size: 26px;
+  border: none;
+  border-radius: 15px;
+  transition: 0.2s;
+}
+.post-blog:hover {
+  background-color: #4f4c09;
 }
 @media only screen and (max-width: 720px) {
   .table-sub {
