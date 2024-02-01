@@ -27,8 +27,9 @@
   padding-left: 3%;
 }
 .right-scrol {
-  overflow: hidden;
-  height: 100vh;
+  overflow: auto;
+  height: 90vh;
+  margin-bottom: 50px;
 }
 .right-scrol::-webkit-scrollbar {
   display: none;

@@ -1,36 +1,19 @@
+const blogs = [
+  {
+    title: "Reasons Business needs Agency.",
+    template: "",
+
+    image_src: "",
+  },
+];
 const editor = document.getElementById("richtext");
 const button_post = document.querySelector(".post-blog");
+const title = document.getElementById("title-of-blog");
 
 ///SELECT BLOG CONATAIRNER
 const blog_dash_store = document.querySelector(".blog-update");
 
 ////// blog container
-const blogs = [
-  {
-    title: "Reasons Business needs Agency.",
-    description:
-      "Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.",
-    image_src: "",
-    small_description:
-      "Reasons Business needs Agency.Reasons Business needs Agency.",
-  },
-  {
-    title: "Reasons Business needs Agency.",
-    description:
-      "Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.",
-    image_src: "",
-    small_description:
-      "Reasons Business needs Agency.Reasons Business needs Agency.",
-  },
-  {
-    title: "Reasons Business needs Agency.",
-    description:
-      "Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.Reasons Business needs Agency.",
-    image_src: "",
-    small_description:
-      "Reasons Business needs Agency.Reasons Business needs Agency.",
-  },
-];
 
 // /////////////////////////////////FUNCTION FOR DISPLAY BLOG
 const display = function () {
@@ -58,21 +41,26 @@ button_post.addEventListener("click", function (events) {
   const parser = new DOMParser();
   const dataparse = parser.parseFromString(innertext, "text/html");
 
-  console.log(dataparse.body);
   const data_contained = dataparse.body.children;
+  // console.log(dataparse.body.children[1].children[0].src);
+  console.log(data_contained[0].children[0].src);
 
+  if (data_contained[0].children[0].src === "undefined") {
+    console.log("ntayihari");
+  }
   //   Array.from(data_contained).forEach((el) => {
   //     console.log(el.textContent);
   //   });
-  const newtitle = data_contained[0].innerHTML;
-  const newobj = {
-    title: newtitle,
-    description: "",
 
-    image_src: "",
-    small_description: "",
+  let imagesrc = data_contained[0].children[0].src;
+  const newobj = {
+    title: title.value,
+    template: `${dataparse.body.innerHTML}`,
+
+    image_src: `${imagesrc}`,
   };
   blogs.push(newobj);
-  console.log(data_contained[0].textContent);
+  console.log(dataparse.body.innerHTML);
+  console.log(blogs);
   display();
 });

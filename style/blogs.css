@@ -124,6 +124,16 @@
 .button-left-home:hover {
   background-color: var(--main-yelow-color);
 }
+
+/* blog post */
+.title-blog {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.title-blog p {
+  width: 30%;
+}
 @media only screen and (max-width: 1200px) {
   .like-blog {
     padding-left: 3px;

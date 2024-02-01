@@ -111,6 +111,23 @@
   color: #a6a001;
 }
 
+/* blog post */
+.title-blog {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0;
+}
+.title-blog p {
+  width: 10%;
+  color: white;
+  font-size: 13px;
+  text-align: left;
+}
+.title-blog input {
+  border-radius: 10px;
+}
+
 @media only screen and (max-width: 720px) {
   .store-two {
     margin-top: 30px;
