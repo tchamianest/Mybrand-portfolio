@@ -1,14 +1,25 @@
-const blogs = [
+let blogs = [
   {
     title: "Reasons Business needs Agency.",
+    id: 1,
     template: "",
 
     image_src: "",
+    small_description: "",
   },
 ];
+
+///// CHECK IF IS IN LOCAL STORAGE
+
+const storedBlogs = localStorage.getItem("blogs");
+blogs = storedBlogs ? JSON.parse(storedBlogs) : [];
+
+//////// eND OF GETING IT FROM LOCAR STORAGES
+
 const editor = document.getElementById("richtext");
 const button_post = document.querySelector(".post-blog");
 const title = document.getElementById("title-of-blog");
+const clealocar = document.getElementById("clear-blog");
 
 ///SELECT BLOG CONATAIRNER
 const blog_dash_store = document.querySelector(".blog-update");
@@ -43,24 +54,37 @@ button_post.addEventListener("click", function (events) {
 
   const data_contained = dataparse.body.children;
   // console.log(dataparse.body.children[1].children[0].src);
-  console.log(data_contained[0].children[0].src);
+  // console.log(data_contained[0].children[0].src);
 
-  if (data_contained[0].children[0].src === "undefined") {
-    console.log("ntayihari");
+  let imagesrc;
+  let smalldesc;
+  if (typeof data_contained[0].children[0].src === "undefined") {
+    imagesrc = dataparse.body.children[1].children[0].src;
+  } else {
+    imagesrc = data_contained[0].children[0].src;
   }
-  //   Array.from(data_contained).forEach((el) => {
-  //     console.log(el.textContent);
-  //   });
-
-  let imagesrc = data_contained[0].children[0].src;
+  if (data_contained[1].textContent) {
+    smalldesc = data_contained[1].textContent;
+  }
   const newobj = {
+    id: blogs.length + 1,
     title: title.value,
+
     template: `${dataparse.body.innerHTML}`,
 
     image_src: `${imagesrc}`,
+    small_description: smalldesc,
   };
   blogs.push(newobj);
-  console.log(dataparse.body.innerHTML);
+  // console.log(dataparse.body.innerHTML);
   console.log(blogs);
+
+  //// store my abject in locar storage
+  localStorage.setItem("blogs", JSON.stringify(blogs));
   display();
+});
+
+////////CLEAR LOCAR STORAGE
+clealocar.addEventListener("click", function () {
+  localStorage.clear();
 });

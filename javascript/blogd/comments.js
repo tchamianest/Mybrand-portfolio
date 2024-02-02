@@ -66,5 +66,9 @@ like_img.addEventListener("click", function (e) {
     like_img.setAttribute("src", "imagess/icons/liked.png");
     like_counter++;
     like_number.innerHTML = like_counter;
+  } else {
+    like_img.setAttribute("src", "imagess/icons/like-svgrepo-com.svg");
+    like_counter--;
+    like_number.innerHTML = like_counter;
   }
 });

@@ -3,7 +3,7 @@ const dange_email = document.querySelector(".validation-message-email");
 const input_name = document.getElementById("name-input");
 const input_email = document.getElementById("email-validation");
 const submitt_button = document.getElementById("submitt-contact");
-const login_button = document.getElementById("login-button");
+// const login_button = document.getElementById("login-button");
 
 // VARID EMAIL REGEX
 const varidemailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -50,15 +50,15 @@ submitt_button.addEventListener("click", function (event) {
 ///////////////////////////////////////////////////////////
 //LOGIN BUTTON
 
-login_button.addEventListener("click", function (e) {
-  e.preventDefault();
-  console.log("login clicked");
-  if (!varidemailRegex.test(input_email.value)) {
-    varid = false;
-    email_valid("block", " Put Valid email Please");
-  } else {
-    varid = true;
-    email_valid("none", "");
-    window.location.href = "dashboard.html";
-  }
-});
+// login_button.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   console.log("login clicked");
+//   if (!varidemailRegex.test(input_email.value)) {
+//     varid = false;
+//     email_valid("block", " Put Valid email Please");
+//   } else {
+//     varid = true;
+//     email_valid("none", "");
+//     window.location.href = "dashboard.html";
+//   }
+// });
