@@ -48,8 +48,26 @@ button.addEventListener("click", function (e) {
 
   ////add to arrray
   comment_info.push(objc);
+  comments_input.value = "";
   //   comment_container.insertAdjacentHTML("afterbegin", template);
   display();
+});
+
+//////// USE ENTER KEY DOWN
+comments_input.addEventListener("keydown", function (events) {
+  if (events.key === "Enter") {
+    const commentsnew = comments_input.value;
+
+    const user_name = "unkown";
+
+    const objc = { name: `${user_name}`, comm: `${commentsnew}` };
+
+    ////add to arrray
+    comment_info.push(objc);
+    comments_input.value = "";
+    //   comment_container.insertAdjacentHTML("afterbegin", template);
+    display();
+  }
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
