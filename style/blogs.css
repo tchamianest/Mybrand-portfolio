@@ -15,6 +15,11 @@
   width: 100%;
   overflow: hidden;
 }
+.blog-review img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+}
 
 /* scroll section */
 .scroller-section {
@@ -124,6 +129,16 @@
 .button-left-home:hover {
   background-color: var(--main-yelow-color);
 }
+
+/* blog post */
+.title-blog {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.title-blog p {
+  width: 30%;
+}
 @media only screen and (max-width: 1200px) {
   .like-blog {
     padding-left: 3px;
@@ -180,6 +195,17 @@
 }
 
 @media only screen and (max-width: 500px) {
+  .blogs-with-button {
+    border-radius: 0px;
+
+    overflow: cover;
+  }
+  .blog-review {
+    width: 100%;
+
+    min-width: 250px;
+  }
+
   .blog-description {
     display: none;
   }

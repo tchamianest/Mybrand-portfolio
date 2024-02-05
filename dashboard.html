@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="style/dashboard/table.css" />
     <link rel="stylesheet" href="style/dashboard/notification-dash.css" />
     <link rel="stylesheet" href="style/dashboard/blog-dash.css" />
+    <link rel="stylesheet" href="/richtexteditor/rte_theme_default.css" />
     <script
       type="text/javascript"
       src="https://www.gstatic.com/charts/loader.js"
@@ -28,10 +29,12 @@
       src="https://www.gstatic.com/charts/loader.js"
     ></script>
     <script src="javascript/chartbar.js"></script>
-    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
-    <script type="text/javascript">
-      
-    </script>
+    <link rel="stylesheet" href="/richtexteditor/rte_theme_default.css" />
+    <script type="text/javascript" src="/richtexteditor/rte.js"></script>
+    <script
+      type="text/javascript"
+      src="/richtexteditor/plugins/all_plugins.js"
+    ></script>
   </head>
   <body>
     <div class="dash-container">
@@ -82,7 +85,7 @@
             <div class="left-buton">
               <img src="imagess/icons/blogs.png" />
               <a href="#blog">
-                <p class="color-tex">Blogs +</p>
+                <p class="color-tex">Blogs</p>
               </a>
             </div>
           </div>
@@ -90,7 +93,7 @@
             <div class="left-buton">
               <img src="imagess/icons/subscribtion.png" />
               <a href="#subscribes">
-                <p class="color-tex">Subscription</p>
+                <p class="color-tex">Add blog+</p>
               </a>
               <div class="number-notification">4</div>
             </div>
@@ -255,11 +258,11 @@
                 </div>
               </div>
               <div id="blog" class="first-page">
-                <p>blogs 📃</p>
+                <p style="margin-bottom: 10px">blogs 📃</p>
                 <div class="blogs-creater">
                   <div class="store-two">
                     <div class="blog-update">
-                      <div class="text-not">
+                      <!-- <div class="text-not">
                         <p>Reasons Business needs Agency.</p>
                         <button class="accept">update</button>
                         <button class="delete">delete</button>
@@ -303,83 +306,38 @@
                         <p>Reasons Business needs Agency.</p>
                         <button class="accept">update</button>
                         <button class="delete">delete</button>
-                      </div>
-                    </div>
-                    <div class="create-new">
-                      <textarea name="editor1" id="CK1"></textarea>
-                      <br>
-                      <button id="submitt-blog" class="button button-submit" >Submit text</button>                     
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
                 <div id="subscribes" class="first-page">
-                  <p>Subscription</p>
+                  <p>Add Blog+</p>
+
                   <div class="table-sub">
-                    <table>
-                      <tr>
-                        <th>Dates</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                      </tr>
-                      <tr>
-                        <td>January 01 2024</td>
-                        <td>Kalisa daniel</td>
-                        <td>
-                          <a href="mailto:tchamianest@gmail.com"
-                            >tchamianest@gmail.com</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>January 01 2024</td>
-                        <td>Kalisa daniel</td>
-                        <td>
-                          <a href="mailto:tchamianest@gmail.com"
-                            >tchamianest@gmail.com</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>January 01 2024</td>
-                        <td>Kalisa daniel</td>
-                        <td>
-                          <a href="mailto:tchamianest@gmail.com"
-                            >tchamianest@gmail.com</a
-                          >
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>January 01 2024</td>
-                        <td>Kalisa daniel</td>
-                        <td><a href="">tchamianest@gmail.com</a></td>
-                      </tr>
-                      <tr>
-                        <td>January 01 2024</td>
-                        <td>Kalisa daniel</td>
-                        <td><a href="">tchamianest@gmail.com</a></td>
-                      </tr>
-                      <tr>
-                        <td>January 01 2024</td>
-                        <td>Kalisa daniel</td>
-                        <td><a href="">tchamianest@gmail.com</a></td>
-                      </tr>
-                      <tr>
-                        <td>January 01 2024</td>
-                        <td>daniel kibasumba</td>
-                        <td><a href="">tchamianest@gmail.com</a></td>
-                      </tr>
-                      <tr>
-                        <td>January 01 2024</td>
-                        <td>Kalisa daniel</td>
-                        <td><a href="">tchamianest@gmail.com</a></td>
-                      </tr>
-                      <tr>
-                        <td>January 01 2024</td>
-                        <td>Kalisa daniel</td>
-                        <td><a href="">tchamianest@gmail.com</a></td>
-                      </tr>
-                    </table>
+                    <div class="title-blog">
+                      <p class="">Enter title :</p>
+                      <input
+                        id="title-of-blog"
+                        class="input_title_blog"
+                        placeholder="enter The title of Images"
+                      />
+                      <p class="title"></p>
+                    </div>
+                    <div class="title-blog">
+                      <p class="">Enter image :</p>
+                      <input type="file" id="imageInput" accept="image/*" />
+                      <p class="image-validation"></p>
+                    </div>
+
+                    <div class="texxeditor">
+                      <textarea id="richtext"></textarea>
+                    </div>
+                    <button class="post-blog" type="submit" id="saveblog">
+                      Create Blog
+                    </button>
+                    <button class="post-blog" type="submit" id="clear-blog">
+                      Clear storage
+                    </button>
                   </div>
                 </div>
               </div>
@@ -388,7 +346,12 @@
         </div>
       </header>
     </div>
+    <script>
+      var editor1 = new RichTextEditor("richtext");
+    </script>
     <script src="/javascript/dashboard/scroll.js"></script>
-    <script src="/javascript/blogd/uploadnewblog.js"></script>
+    <script src="/javascript/blogd/deleteblog.js"></script>
+
+    <script src="/javascript/rich/controlpost.js"></script>
   </body>
 </html>

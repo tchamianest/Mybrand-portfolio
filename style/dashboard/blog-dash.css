@@ -4,9 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 80vh;
+  margin-top: 0;
 }
 .store-two {
-  margin-top: 30px;
+  margin-top: 0px;
   width: 90%;
   display: flex;
   gap: 30px;
@@ -14,13 +16,12 @@
 
 .blog-update {
   border-radius: 10px;
-  padding: 10px;
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   background-color: var(--main-section-color);
   overflow-y: scroll;
-  height: 60vh;
+  height: 70vh;
 }
 .blog-update::-webkit-scrollbar {
   width: 4px;
@@ -34,12 +35,6 @@
   background-color: #686868;
 }
 
-.create-new {
-  width: 40%;
-  background-color: var(--main-section-color);
-  border-radius: 10px;
-  padding: 20px;
-}
 .blogsjs {
   width: 100%;
 }
@@ -52,6 +47,7 @@
   justify-content: center;
 }
 .text-not p {
+  flex: 1;
   padding: 20px;
   background-color: rgb(45, 45, 45);
   text-transform: none;
@@ -113,6 +109,23 @@
 /* .active-link  styling */
 .active-link {
   color: #a6a001;
+}
+
+/* blog post */
+.title-blog {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0;
+}
+.title-blog p {
+  width: 10%;
+  color: white;
+  font-size: 13px;
+  text-align: left;
+}
+.title-blog input {
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 720px) {
