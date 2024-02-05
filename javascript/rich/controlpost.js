@@ -20,6 +20,31 @@ const editor = document.getElementById("richtext");
 const button_post = document.querySelector(".post-blog");
 const title = document.getElementById("title-of-blog");
 const clealocar = document.getElementById("clear-blog");
+const image = document.getElementById("imageInput");
+let imgs = "";
+////////////////////////////////////////////////////
+image.addEventListener("change", function () {
+  if (imageInput.files.length > 0) {
+    const selectedFile = imageInput.files[0];
+    const reader = new FileReader();
+
+    // Create a new image element
+    const previewImage = new Image();
+
+    previewImage.onload = function () {
+      imgs = previewImage.src;
+      console.log(previewImage);
+      console.log("Image Src:", imgs);
+    };
+
+    // Read the file as a data URL (base64 encoded image)
+    reader.onload = function (e) {
+      // Set the data URL as the source of the preview image
+      previewImage.src = e.target.result;
+    };
+    reader.readAsDataURL(selectedFile);
+  }
+});
 
 ///SELECT BLOG CONATAIRNER
 const blog_dash_store = document.querySelector(".blog-update");
@@ -56,23 +81,20 @@ button_post.addEventListener("click", function (events) {
   // console.log(dataparse.body.children[1].children[0].src);
   // console.log(data_contained[0].children[0].src);
 
-  let imagesrc;
   let smalldesc;
-  if (typeof data_contained[0].children[0].src === "undefined") {
-    imagesrc = dataparse.body.children[1].children[0].src;
-  } else {
-    imagesrc = data_contained[0].children[0].src;
-  }
-  if (data_contained[1].textContent) {
-    smalldesc = data_contained[1].textContent;
+
+  if (data_contained[0].textContent) {
+    smalldesc = data_contained[0].textContent;
   }
   const newobj = {
     id: blogs.length + 1,
     title: title.value,
+    comments: [],
+    like: 0,
 
     template: `${dataparse.body.innerHTML}`,
 
-    image_src: `${imagesrc}`,
+    image_src: `${imgs}`,
     small_description: smalldesc,
   };
   blogs.push(newobj);

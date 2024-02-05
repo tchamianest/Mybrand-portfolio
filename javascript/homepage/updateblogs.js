@@ -16,26 +16,33 @@ const display = function () {
     const small_description = el.small_description;
     const image_sr = el.image_src;
     const blogId = el.id;
+    const likee = el.like;
+    const com = el.comments.length;
 
     ////CREATE ONE CARD TEMPLATE
 
-    const onetemplate = ` <a href="blog.html?id=${blogId}"  class="link-blog">
+    const onetemplate = ` <a href="blogs.html?id=${blogId}"  class="link-blog">
         <div class="blog-review">
           <img src="${image_sr}">
           <div class="like-blog">
-            <p>•11 Like</p>
-            <p>•22 com</p>
+            <p>•${likee} Like</p>
+            <p>•${com} com</p>
           </div>
           <p class="blog-title">${title}</p>
           <p class="blog-description">${small_description}</p>
       </div>
       </a>`;
 
-    blog_store_one.insertAdjacentHTML("beforeend", onetemplate);
+    blog_store_one.insertAdjacentHTML("afterbegin", onetemplate);
   });
 };
 display();
-const link_blog = document.querySelector(".link-blog");
-link_blog.addEventListener("click", function () {
-  window.location.href = `blog.html?id=${blogId}`;
+blog_store_one.addEventListener("click", function (event) {
+  const clickedLink = event.target.closest(".link-blog");
+
+  if (clickedLink) {
+    event.preventDefault(); // Prevent the default behavior of the anchor tag
+    const blogId = clickedLink.getAttribute("href").split("=")[1];
+    window.location.href = `blogs.html?id=${blogId}`;
+  }
 });
