@@ -7,4 +7,5 @@ accept.addEventListener("click", function () {
   console.log("clicked");
   let selectedBlog = blogs.find((blog) => blog.id === accept.id);
   blogs.remove(selectedBlog);
+  //   changes
 });
