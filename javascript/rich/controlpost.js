@@ -63,7 +63,7 @@ const display = function () {
     ///////TEMPLATE FOR DAHBORD CONTROL
     const dashBlogtemp = `<div class="text-not">
     <p>${title}</p>
-    <button class="accept">update</button>
+    <button id="${blog.id}" class="accept">update</button>
     <button class="delete">delete</button>
   </div>`;
 
