@@ -19,7 +19,7 @@ const display = function () {
 
     ////CREATE ONE CARD TEMPLATE
 
-    const onetemplate = ` <a href="blog.html?id=${blogId}" class="link-blog">
+    const onetemplate = ` <a href="blog.html?id=${blogId}"  class="link-blog">
         <div class="blog-review">
           <img src="${image_sr}">
           <div class="like-blog">
@@ -35,3 +35,7 @@ const display = function () {
   });
 };
 display();
+const link_blog = document.querySelector(".link-blog");
+link_blog.addEventListener("click", function () {
+  window.location.href = `blog.html?id=${blogId}`;
+});
