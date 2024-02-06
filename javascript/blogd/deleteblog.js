@@ -1,10 +1,12 @@
 // call the array in locar storage
 // const storedBlogs = localStorage.getItem("blogs");
 // const blogs = storedBlogs ? JSON.parse(storedBlogs) : [];
-const accept = document.querySelector(".accept");
+// const deleted = document.querySelector(".delete");
 
-accept.addEventListener("click", function () {
-  console.log("clicked");
-  let selectedBlog = blogs.find((blog) => blog.id === accept.id);
-  blogs.remove(selectedBlog);
-});
+// deleted.addEventListener("click", function () {
+//   console.log("clicked");
+//   console.log(deleted.id);
+//   let selectedBlog = blogs.find((blog) => blog.id === accept.id);
+//   blogs.remove(selectedBlog);
+//   //   changes
+// });
