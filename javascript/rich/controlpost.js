@@ -63,8 +63,8 @@ const display = function () {
     ///////TEMPLATE FOR DAHBORD CONTROL
     const dashBlogtemp = `<div class="text-not">
     <p>${title}</p>
-    <button id="${blog.id}" class="accept">update</button>
-    <button class="delete">delete</button>
+    <button  class="accept">update</button>
+    <button id="${blog.id}" class="delete delete-blog">delete</button>
   </div>`;
 
     blog_dash_store.insertAdjacentHTML("afterbegin", dashBlogtemp);
@@ -109,4 +109,26 @@ button_post.addEventListener("click", function (events) {
 ////////CLEAR LOCAR STORAGE
 clealocar.addEventListener("click", function () {
   localStorage.clear();
+});
+
+/////// delete button
+const deleted = document.querySelector(".delete-blog");
+
+deleted.addEventListener("click", function () {
+  console.log("clicked");
+  console.log(deleted.id);
+
+  let selectedBlog = blogs.find((blog) => blog.id === deleted.id);
+  //   changes
+  if (selectedBlog !== -1) {
+    // Remove the blog from the array
+    blogs.splice(selectedBlog, 1);
+
+    // Save the updated array into local storage
+    localStorage.setItem("blogs", JSON.stringify(blogs));
+    display();
+    console.log("Blog deleted successfully");
+  } else {
+    console.log("Blog not found");
+  }
 });
