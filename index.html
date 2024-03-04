@@ -40,7 +40,7 @@
                 <li><a class="search-home color-tex" href="#review">Review Pages</a></li>
                 <li><a class="search-home color-tex" href="#blogs">Blogs</a></li>
                 <li><a class="search-home color-tex" href="#contact">Contact Us</a></li>
-                <li><a class="search-home color-tex" href="login.html">Login </a></li>
+                <li><a class="search-home color-tex"  href="login.html">Login/Signup </a></li>
             
               </ul>
             </nav>
@@ -49,7 +49,7 @@
               src="imagess/icons/menu-svgrepo-com.svg"
               alt="menu-button" onclick="Toggle()"
             />
-            <button class="left-button" ><a href="login.html">Sigin/Login &rarr;</a></button>
+            <button class="left-button" id="setion-user"><a id="profileStatus" ></a></button>
           </div>
         </div>
 
@@ -315,8 +315,9 @@
             </div>
             <div class="form-right">
               <p class="title-form">Message :</p>
-              <textarea class="longText" name="longText" rows="4" cols="49"></textarea>
+              <textarea id="message-to-admin" class="longText" name="longText" rows="4" cols="49"></textarea>
             </div>
+            <div class="validation-message-response" style="background-color: transparent;color: white; text-align: center;display: none;">thank you for the message</div>
             <div class=" button-form">
               <button id="submitt-contact"  >Submitt</button>
             </div>
@@ -390,6 +391,7 @@
       </footer>
     </div>
     <script src="javascript/blogd/home.js"></script>
+    <script type="module" src="javascript/blogd/contacthomepage.js"></script>
     <script src="javascript/homepage/scrollhome.js"></script>
     <script src="javascript/form/varidation.js"></script>
     <script src="/javascript/homepage/updateblogs.js"></script>
@@ -411,6 +413,24 @@
                 navbar.style.opacity="0";
             }
         }
+    </script>
+    <script>
+      const usename = localStorage.getItem("userEmail");
+      const profilebutton = document.getElementById("profileStatus");
+      const usersection = document.getElementById("setion-user");
+
+      if (usename) {
+        const final = usename.split("@")[0];
+        console.log(final);
+        usersection.style.display = "block";
+        profilebutton.innerHTML = final;
+      } else {
+        usersection.style.display = "none";
+      }
+      profilebutton.addEventListener("click", function () {
+        localStorage.clear();
+        location.reload();
+      });
     </script>
   </body>
 </html>
