@@ -13,14 +13,16 @@ const email_valid = function (style, message) {
 
 const pass_valid = function (style, message) {
   dange_pass.style.display = `${style}`;
-  dange_pass.innerHTML = `⚠️ ${message}`;
+  dange_pass.innerHTML = ` ${message}`;
 };
 const password = 12345;
 let varid;
 
 login_button.addEventListener("click", function (e) {
   console.log("yesy tested");
+  login_button.innerHTML = `<div class="loader-button"></div>`;
   if (!varidemailRegex.test(input_email.value)) {
+    login_button.innerHTML = `sign Up`;
     email_valid("block", " Put Valid email Please");
   } else {
     const Loginuser = async () => {
@@ -38,14 +40,17 @@ login_button.addEventListener("click", function (e) {
         }).then((res) => {
           console.log(res.status);
           if (res.status == 201) {
+            login_button.innerHTML = `<div class="loader-button"></div>`;
             pass_valid("block", "user created succeful");
             window.location.href = "login.html";
           } else {
-            pass_valid("block", "User email exist");
+            login_button.innerHTML = `sign Up`;
+            pass_valid("block", "use email exist");
           }
         });
       } catch (err) {
         console.log(err.message);
+        login_button.innerHTML = `sign Up`;
         pass_valid("block", err);
       }
     };

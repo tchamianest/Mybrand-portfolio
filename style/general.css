@@ -20,7 +20,24 @@
   box-sizing: border-box;
   overflow: hidden;
 }
-
+.loader-button {
+  pointer-events: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: anl 1s ease infinite;
+}
+@keyframes anl {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
 .color-tex {
   background-color: transparent;
   text-decoration: none;

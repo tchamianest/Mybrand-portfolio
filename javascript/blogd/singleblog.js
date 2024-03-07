@@ -36,11 +36,14 @@ const handleblog = async () => {
       const title_blog = document.querySelector(".blog-title");
       const img_blog = document.getElementById("image-blog");
       const p_Fulldesc = document.getElementById("text-desc");
+      const smalldesc = document.getElementById("small-desc");
       // Set the image source only if imgsc is defined
       if (selectedBlog.image_src) {
         img_blog.src = selectedBlog.image_src;
       }
 
+      smalldesc.innerHTML = selectedBlog.small_description;
+      console.log(selectedBlog);
       title_blog.innerHTML = selectedBlog.title;
       p_Fulldesc.style.background = "transparent";
       p_Fulldesc.innerHTML = selectedBlog.template;

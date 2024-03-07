@@ -10,7 +10,7 @@
 }
 .blog-review {
   background-color: transparent;
-  height: fit-content;
+  height: 500px;
   min-width: 400px;
   width: 100%;
   overflow: hidden;
@@ -49,7 +49,7 @@
   max-width: fit-content;
   gap: 10px;
   overflow: auto;
-  width: 60%;
+  width: 70%;
 }
 .blogs-with-button::-webkit-scrollbar {
   display: none;
@@ -60,7 +60,7 @@
   margin-bottom: 10px;
   color: #fff;
   font-family: Syne;
-  font-size: 28px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -202,8 +202,9 @@
   }
   .blog-review {
     width: 100%;
+    height: fit-content;
 
-    min-width: 250px;
+    min-width: 350px;
   }
 
   .blog-description {
