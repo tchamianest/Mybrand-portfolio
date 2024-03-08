@@ -50,44 +50,55 @@ const handleblogs = async () => {
 
     ////////////////post comments and likes
 
+    const tokenstore = localStorage.getItem("authToken");
+    const userType = localStorage.getItem("userType");
     button.addEventListener("click", async function (e) {
       e.preventDefault();
+      button.innerHTML = `<div class="loader-button"></div>`;
+      console.log(tokenstore);
+      console.log(userType);
 
-      const commentsnew = comments_input.value;
-      const usename = localStorage.getItem("userEmail");
-      let user_name;
-      if (usename) {
-        const final = usename.split("@")[0];
-        user_name = final;
+      if (!tokenstore) {
+        window.location.href = "login.html"; // Replace "/home" with the appropriate home page URL
       } else {
-        user_name = "unkown";
-      }
-
-      const objc = { name: `${user_name}`, comment: `${commentsnew}` };
-      try {
-        const response = await fetch(
-          ` https://mybrand-be-2-jfbq.onrender.com/api/blog/${blogId}/comments`,
-          {
-            method: "POST",
-            headers: {
-              "Content-type": "application/json",
-            },
-            body: JSON.stringify(objc),
-          }
-        );
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+        const commentsnew = comments_input.value;
+        const usename = localStorage.getItem("userEmail");
+        let user_name;
+        if (usename) {
+          const final = usename.split("@")[0];
+          user_name = final;
+        } else {
+          user_name = "unkown";
         }
 
-        comments_input.value = "";
-        const updatedCommentsResponse = await fetch(
-          `https://mybrand-be-2-jfbq.onrender.com/api/blog/${blogId}/comments`
-        );
-        const updatedCommentsJson = await updatedCommentsResponse.json();
-        commentsArray = updatedCommentsJson.Allsingleblogcomments;
-        display();
-      } catch (err) {
-        console.log(err);
+        const objc = { name: `${user_name}`, comment: `${commentsnew}` };
+        try {
+          const response = await fetch(
+            ` https://mybrand-be-2-jfbq.onrender.com/api/blog/${blogId}/comments`,
+            {
+              method: "POST",
+              headers: {
+                "Content-type": "application/json",
+              },
+              body: JSON.stringify(objc),
+            }
+          );
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+
+          comments_input.value = "";
+          const updatedCommentsResponse = await fetch(
+            `https://mybrand-be-2-jfbq.onrender.com/api/blog/${blogId}/comments`
+          );
+          const updatedCommentsJson = await updatedCommentsResponse.json();
+          commentsArray = updatedCommentsJson.Allsingleblogcomments;
+          display();
+          button.innerHTML = `Comments >>`;
+        } catch (err) {
+          button.innerHTML = `Comments >>`;
+          console.log(err);
+        }
       }
     });
 

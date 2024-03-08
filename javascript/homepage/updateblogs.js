@@ -31,18 +31,21 @@ const display = function (blogs) {
     );
     const updatedLikesJson = await updatedLikesResponse.json();
     let like_counter = updatedLikesJson.likes.length;
+    let onetemplate;
 
-    const onetemplate = ` <a href="blogs.html?id=${blogId}"  class="link-blog">
-        <div class="blog-review">
-          <img src="${image_sr}">
-          <div class="like-blog">
-            <p>•${like_counter} Like</p>
-            <p>•${commentsArray} com</p>
+    document.querySelector(".loader-button").style.display = "none";
+
+    onetemplate = ` <a href="blogs.html?id=${blogId}"  class="link-blog">
+            <div class="blog-review">
+              <img src="${image_sr}">
+              <div class="like-blog">
+                <p>•${like_counter} Like</p>
+                <p>•${commentsArray} com</p>
+              </div>
+              <p class="blog-title">${title}</p>
+              <p class="blog-description">${small_description}</p>
           </div>
-          <p class="blog-title">${title}</p>
-          <p class="blog-description">${small_description}</p>
-      </div>
-      </a>`;
+          </a>`;
 
     blog_store_one.insertAdjacentHTML("afterbegin", onetemplate);
   });

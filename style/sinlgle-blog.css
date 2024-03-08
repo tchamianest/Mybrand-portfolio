@@ -113,6 +113,41 @@
   line-height: 30px;
   padding-bottom: 50px;
 }
+.load-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader-button-button {
+  pointer-events: none;
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  text-align: center;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: anl 1s ease infinite;
+}
+.loader-button {
+  pointer-events: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: anl 1s ease infinite;
+}
+@keyframes anl {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
 .blog-store {
   width: 100%;
   padding-top: 70px;

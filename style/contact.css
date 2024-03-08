@@ -6,6 +6,24 @@
   font-weight: 700;
   line-height: 20.16px;
 }
+.loader-button {
+  pointer-events: none;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: anl 1s ease infinite;
+}
+@keyframes anl {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
 
 .contact-form {
   display: flex;

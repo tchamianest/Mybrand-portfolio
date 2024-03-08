@@ -31,7 +31,7 @@ const handleblog = async () => {
     selectedBlog = blogjson.blogs;
     comments = commentjdon.Allsingleblogcomments;
     like = likejson.likes;
-
+    document.querySelector(".load-container").style.display = "none";
     if (selectedBlog) {
       const title_blog = document.querySelector(".blog-title");
       const img_blog = document.getElementById("image-blog");
