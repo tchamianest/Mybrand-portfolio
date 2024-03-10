@@ -47,6 +47,8 @@ const handleblog = async () => {
       title_blog.innerHTML = selectedBlog.title;
       p_Fulldesc.style.background = "transparent";
       p_Fulldesc.innerHTML = selectedBlog.template;
+      document.querySelector(".comments-container").style.display = "flex";
+      document.querySelector(".lekes-comments").style.display = "flex";
     } else {
       console.error("Blog not found");
     }

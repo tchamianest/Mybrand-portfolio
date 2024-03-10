@@ -26,6 +26,7 @@
   max-width: 1920px;
   padding-left: 8%;
   padding-right: 8%;
+  min-width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,10 +110,12 @@
 
 .button-left-home {
   margin-right: 30px;
+  display: none;
 }
 
 .button-right-home {
   margin-left: 30px;
+  display: none;
 }
 .button-right-home,
 .button-left-home {

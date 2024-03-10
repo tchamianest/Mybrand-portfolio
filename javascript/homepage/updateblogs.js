@@ -32,7 +32,8 @@ const display = function (blogs) {
     const updatedLikesJson = await updatedLikesResponse.json();
     let like_counter = updatedLikesJson.likes.length;
     let onetemplate;
-
+    document.querySelector(".button-left-home").style.display = "block";
+    document.querySelector(".button-right-home").style.display = "block";
     document.querySelector(".loader-button").style.display = "none";
 
     onetemplate = ` <a href="blogs.html?id=${blogId}"  class="link-blog">
