@@ -40,7 +40,7 @@
                 <li><a class="search-home color-tex" href="#review">Review Pages</a></li>
                 <li><a class="search-home color-tex" href="#blogs">Blogs</a></li>
                 <li><a class="search-home color-tex" href="#contact">Contact Us</a></li>
-                <li><a class="search-home color-tex" href="login.html">Login </a></li>
+                <li><a class="search-home color-tex"  href="login.html">Login/Signup </a></li>
             
               </ul>
             </nav>
@@ -49,7 +49,7 @@
               src="imagess/icons/menu-svgrepo-com.svg"
               alt="menu-button" onclick="Toggle()"
             />
-            <button class="left-button" ><a href="login.html">Sigin/Login &rarr;</a></button>
+            <button class="left-button" id="setion-user"><a id="profileStatus" ></a></button>
           </div>
         </div>
 
@@ -194,8 +194,9 @@
          <div class="scroller-section">
           <div class="button-left-home">&#8592;</div>
           <div id="blog-card-store" class="blogs-with-button">
+            <div class="loader-button"></div>
 
-            <a href="blogs.html" class="link-blog ">
+            <!-- <a href="blogs.html" class="link-blog ">
               <div class="blog-review">
                 <img src="imagess/blog-1.png">
                 <div class="like-blog">
@@ -271,7 +272,7 @@
                 <p class="blog-title">Reasons Business needs Agency.</p>
                 <p class="blog-description">Design Club is a digital agency specialized in ecommerce. We build scalable, high-end web shops.</p>
             </div>
-            </a>
+            </a> -->
           </div>
          <div class="button-right-home">&#8594;</div>
         </div>
@@ -281,7 +282,7 @@
       </section>
       <section  class="blog-container ">
         <p class="skills-title  ">Contact PAge</p>
-        <p class="contact-desicription">Fill out the form and a member from our sales team will get back to you within 24 hours, or scroll down for more ways to get in touch.</p>  
+        <p class="contact-desicription ">Fill out the form and a member from our sales team will get back to you within 24 hours, or scroll down for more ways to get in touch.</p>  
         <div class="contact-form review">
           <div class="contact-left-section">
             <p class="title-contact">Contact US :</p>
@@ -315,8 +316,9 @@
             </div>
             <div class="form-right">
               <p class="title-form">Message :</p>
-              <textarea class="longText" name="longText" rows="4" cols="49"></textarea>
+              <textarea id="message-to-admin" class="longText" name="longText" rows="4" cols="49"></textarea>
             </div>
+            <div class="validation-message-response" style="background-color: transparent;color: white; text-align: center;display: none;">thank you for the message</div>
             <div class=" button-form">
               <button id="submitt-contact"  >Submitt</button>
             </div>
@@ -390,6 +392,7 @@
       </footer>
     </div>
     <script src="javascript/blogd/home.js"></script>
+    <script type="module" src="javascript/blogd/contacthomepage.js"></script>
     <script src="javascript/homepage/scrollhome.js"></script>
     <script src="javascript/form/varidation.js"></script>
     <script src="/javascript/homepage/updateblogs.js"></script>
@@ -411,6 +414,24 @@
                 navbar.style.opacity="0";
             }
         }
+    </script>
+    <script>
+     const usename = localStorage.getItem("userEmail");
+      const profilebutton = document.getElementById("profileStatus");
+      const usersection = document.getElementById("setion-user");
+
+      if (usename) {
+        const final = usename.split("@")[0];
+        console.log(final);
+        usersection.style.display = "block";
+        profilebutton.innerHTML = final;
+      } else {
+        usersection.style.display = "none";
+      }
+      profilebutton.addEventListener("click", function () {
+        localStorage.clear();
+        location.reload();
+      });
     </script>
   </body>
 </html>

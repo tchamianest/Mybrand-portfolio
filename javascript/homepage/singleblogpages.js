@@ -1,14 +1,4 @@
-///// CHECK IF IS IN LOCAL STORAGE
-
-// const storedBlogs = localStorage.getItem("blogs");
-// const blogs = storedBlogs ? JSON.parse(storedBlogs) : [];
-
-//////// eND OF GETING IT FROM LOCAR STORAGES
-
-// console.log(blogs);
-//////// select the needed to create the blog
-
-const blog_store_one = document.getElementById("blog-card-store");
+const blog_store_one = document.getElementById("single-blog-container-slider");
 
 const display = function (blogs) {
   blogs.forEach(async (el) => {
@@ -31,21 +21,17 @@ const display = function (blogs) {
     );
     const updatedLikesJson = await updatedLikesResponse.json();
     let like_counter = updatedLikesJson.likes.length;
-    let onetemplate;
 
-    document.querySelector(".loader-button").style.display = "none";
-
-    onetemplate = ` <a href="blogs.html?id=${blogId}"  class="link-blog">
-            <div class="blog-review">
-              <img src="${image_sr}">
-              <div class="like-blog">
-                <p>•${like_counter} Like</p>
-                <p>•${commentsArray} com</p>
+    const onetemplate = `<div class="blogs-container"> <a href="blogs.html?id=${blogId}" class="link-blog background-remover">
+              <div class="blog-review background-remover">
+                <img src="${image_sr}" class="background-remover image-size-singleblog"  />
+                <p class="blog-title background-remover changer-title">
+                ${title}
+                </p>
+                <p class="blog-description background-remover">
+                ${small_description}
               </div>
-              <p class="blog-title">${title}</p>
-              <p class="blog-description">${small_description}</p>
-          </div>
-          </a>`;
+            </a></div>`;
 
     blog_store_one.insertAdjacentHTML("afterbegin", onetemplate);
   });

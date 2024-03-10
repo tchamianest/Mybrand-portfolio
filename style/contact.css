@@ -5,7 +5,24 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 20.16px;
-  text-transform: uppercase;
+}
+.loader-button {
+  pointer-events: none;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: anl 1s ease infinite;
+}
+@keyframes anl {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 .contact-form {
@@ -152,11 +169,13 @@
 .validation-message-password,
 .validation-message-email,
 .validation-message-name {
-  color: red;
+  color: rgb(249, 249, 249);
   background-color: transparent;
   margin-top: 0px;
-  text-align: left;
+  text-align: center;
   display: none;
+  font-size: 17px;
+  font-weight: 200;
 }
 .input-erro {
   flex: 1;
@@ -170,9 +189,7 @@
     margin-bottom: 0px;
     font-size: 8px;
   }
-  .contact-description {
-    font-size: 7px;
-  }
+
   .socila-media a img {
     background-color: transparent;
     width: 30px;
@@ -189,7 +206,9 @@
 @media only screen and (max-width: 500px) {
   .contact-desicription {
     font-size: 6px;
-    line-height: 10px;
+    line-height: 15px;
+    font-weight: 100;
+    text-transform: lowercase;
   }
   .form-right {
     display: block;

@@ -8,7 +8,7 @@ navconatinre.forEach((el) => {
     // console.log("Top:", rect.top, bottom);
 
     // IF IT IS THE LOGIN LINK I NEED TO GO TO OTHER PAGES
-    if (el.children[0].innerHTML === "Login ") {
+    if (el.children[0].innerHTML === "Login/Signup ") {
       window.location.href = "login.html";
     } else {
       // console.log(el.children[0]);

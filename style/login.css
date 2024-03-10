@@ -11,11 +11,23 @@
 .right-section {
   height: 50%;
 }
+.signup_button_class {
+  background-color: transparent;
+  font-size: 19px;
+  text-decoration: none;
+  text-align: right;
+  padding-top: 0;
+  color: white;
+}
+.signup_button_class:hover {
+  color: var(--main-yelow-color);
+}
 
 .button-login {
   background-color: transparent;
   display: flex;
   align-items: flex-end;
+  flex-direction: column;
   justify-content: flex-end;
 }
 .button-login a {
@@ -24,9 +36,29 @@
   background-color: transparent;
   margin-right: 20px;
 }
+.loader-button {
+  pointer-events: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: anl 1s ease infinite;
+}
+@keyframes anl {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
 .button-login .button12 {
   background-color: transparent;
   width: 97%;
+  display: grid;
+  place-content: center;
   height: 60px;
   margin-top: 30px;
   margin-bottom: 40px;

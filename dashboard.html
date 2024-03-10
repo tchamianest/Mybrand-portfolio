@@ -35,6 +35,17 @@
       type="text/javascript"
       src="/richtexteditor/plugins/all_plugins.js"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "-GoCH5R334rhkaHth",
+        });
+      })();
+    </script>
   </head>
   <body>
     <div class="dash-container">
@@ -96,6 +107,13 @@
                 <p class="color-tex">Add blog+</p>
               </a>
               <div class="number-notification">4</div>
+            </div>
+          </div>
+          <div class="left-content">
+            <div class="left-buton">
+              <a href="#subscribes">
+                <p class="color-tex" id="Logout-button">Logout</p>
+              </a>
             </div>
           </div>
         </div>
@@ -214,34 +232,6 @@
                 <p>Messages ✉️</p>
                 <div class="notification-container">
                   <div class="one-chart">
-                    <p class="header-top">Bizimana Serge👱</p>
-                    <p class="decription-notif">
-                      is simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the industry's standard
-                      dummy text ever since the 1500s, when an unknown printer
-                      took a galley of type and scrambled it to make a type
-                      specimen book.
-                    </p>
-                    <div class="button">
-                      <button class="accept">Read ✅</button>
-                      <button class="delete">Reply ⛔</button>
-                    </div>
-                  </div>
-                  <div class="one-chart">
-                    <p class="header-top">Kalisa Daniel 🙍</p>
-                    <p class="decription-notif">
-                      is simply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the industry's standard
-                      dummy text ever since the 1500s, when an unknown printer
-                      took a galley of type and scrambled it to make a type
-                      specimen book.
-                    </p>
-                    <div class="button">
-                      <button class="accept">Read ✅</button>
-                      <button class="delete">Reply ⛔</button>
-                    </div>
-                  </div>
-                  <div class="one-chart">
                     <p class="header-top">MUkama Sam 🫂</p>
                     <p class="decription-notif">
                       is simply dummy text of the printing and typesetting
@@ -251,6 +241,7 @@
                       specimen book.
                     </p>
                     <div class="button">
+                      <input type="text" style="flex: 1" />
                       <button class="accept">Read ✅</button>
                       <button class="delete">Reply ⛔</button>
                     </div>
@@ -336,7 +327,7 @@
                       Create Blog
                     </button>
                     <button class="post-blog" type="submit" id="clear-blog">
-                      Clear storage
+                      update Blog
                     </button>
                   </div>
                 </div>
@@ -346,12 +337,22 @@
         </div>
       </header>
     </div>
-    <script>
+    <!-- <script>
       var editor1 = new RichTextEditor("richtext");
-    </script>
+    </script> -->
     <script src="/javascript/dashboard/scroll.js"></script>
-    <script src="/javascript/blogd/deleteblog.js"></script>
+    <script>
+      const tokenstore = localStorage.getItem("authToken");
+      const userType = localStorage.getItem("userType");
+      console.log(tokenstore);
+      console.log(userType);
+
+      if (!tokenstore || userType !== "Admin") {
+        window.location.href = "index.html"; // Replace "/home" with the appropriate home page URL
+      }
+    </script>
 
     <script src="/javascript/rich/controlpost.js"></script>
+    <script src="/javascript/form/Querries.js"></script>
   </body>
 </html>

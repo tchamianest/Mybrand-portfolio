@@ -3,6 +3,7 @@ const dange_email = document.querySelector(".validation-message-email");
 const input_name = document.getElementById("name-input");
 const input_email = document.getElementById("email-validation");
 const submitt_button = document.getElementById("submitt-contact");
+const messagebox = document.getElementById("message-to-admin");
 // const login_button = document.getElementById("login-button");
 
 // VARID EMAIL REGEX
@@ -44,6 +45,25 @@ submitt_button.addEventListener("click", function (event) {
   } else {
     varid = true;
     email_valid("none", "");
+  }
+
+  if (varid) {
+    const message = async function () {
+      let messages = {
+        email: input_email.value,
+        messages: messagebox.value,
+      };
+      const sendmessage = await fetch(
+        `https://mybrand-be-2-jfbq.onrender.com/api/message`,
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(messages),
+        }
+      ).then(console.log(sendmessage));
+    };
   }
 });
 
