@@ -28,27 +28,3 @@ user have to Login if you have account if not register new Account using signUp 
 ## Integrated Link of Back-End and Front-End
 
 [https://deploy-preview-21--reliable-taiyaki-319c05.netlify.app/](https://deploy-preview-21--reliable-taiyaki-319c05.netlify.app/)
-
-
-# Front-End Repository for MyBrand
-
-## Introduction
-
-Welcome to the Front-End of MyBrand! This repository is the showcase of the user interface for my portfolio. It complements the back-end repository and together defines the overall design and functionality of MyBrand.
-
-**🚨 Please read the following carefully before starting 🚨**
-
-### Q1: How do I download the files?
-
-If you're new to GitHub and just want to download the entire code, click the green button that says "Code," then select the "Download ZIP" option. If you can't see the button (on mobile), use [this link](https://github.com/tchamianest/MyBrand-FE.git) instead.
-
-
-
-## Codecov Statistics Link
-
-[https://app.codecov.io/gh/tchamianest/MyBrand-FE](https://app.codecov.io/gh/tchamianest/MyBrand-FE)
-
-
-## Integrated Link of Back-End and Front-End
-
-[https://deploy-preview-21--reliable-taiyaki-319c05.netlify.app/](https://deploy-preview-21--reliable-taiyaki-319c05.netlify.app/)
