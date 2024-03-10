@@ -1,3 +1,4 @@
+![image](https://github.com/tchamianest/Mybrand-portfolio/assets/131756888/2314131b-8ee9-4c7c-a032-9be328171e22)
 
 # Front-End Repository for MyBrand
 
