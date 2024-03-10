@@ -9,7 +9,7 @@ Welcome to the Front-End of MyBrand! This repository is the showcase of the user
 
 ### Q1: How do I download the files?
 
-If you're new to GitHub and just want to download the entire code, click the green button that says "Code," then select the "Download ZIP" option. If you can't see the button (on mobile), use [this link]((https://github.com/tchamianest/Mybrand-portfolio)) instead.
+If you're new to GitHub and just want to download the entire code, click the green button that says "Code," then select the "Download ZIP" option. If you can't see the button (on mobile), use [this link]<https://github.com/tchamianest/Mybrand-portfolio>instead.
 
 
 ## Codecov Statistics Link
