@@ -28,4 +28,4 @@ user have to Login if you have account if not register new Account using signUp 
 
 ## Integrated Link of Back-End and Front-End
 
-[https://deploy-preview-21--reliable-taiyaki-319c05.netlify.app/](https://deploy-preview-21--reliable-taiyaki-319c05.netlify.app/)
+<https://reliable-taiyaki-319c05.netlify.app/>
