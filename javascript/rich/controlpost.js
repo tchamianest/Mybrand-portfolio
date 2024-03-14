@@ -196,28 +196,34 @@ const fecthBlogsToApi = async () => {
       const parser = new DOMParser();
       const dataparse = parser.parseFromString(innertext, "text/html");
 
-      const data_contained = dataparse.body.children;
-      let smalldesc;
-      const formData = new FormData();
-
-      if (data_contained[0].textContent) {
-        smalldesc = data_contained[0].textContent;
-      }
-
-      formData.append("image", imageInput.files[0]);
-      console.log(title.value);
-      console.log(dataparse.body.innerHTML);
-      formData.append("title", title.value);
-      formData.append("like", "0");
-      formData.append("template", dataparse.body.innerHTML);
-      formData.append("small_description", smalldesc);
-
       try {
+        const data_contained = dataparse.body.children;
+        let smalldesc;
+        const formData = new FormData();
+
+        if (data_contained[0].textContent) {
+          smalldesc = data_contained[0].textContent;
+        }
+
+        formData.append("image", imageInput.files[0]);
+        console.log(title.value);
+        console.log(dataparse.body.innerHTML);
+        formData.append("title", title.value);
+        formData.append("like", "0");
+        formData.append("template", dataparse.body.innerHTML);
+        formData.append("small_description", smalldesc);
+
+        const headero = {
+          Authorization: tokenstore, // Replace with your actual access token
+          "Content-type": "application/json",
+        };
+        console.log(headero);
+        console.log(formData);
         const response = await fetch(
           "https://mybrand-be-2-jfbq.onrender.com/api/blogs",
           {
             method: "POST",
-            headers: headers,
+            headers: headero,
             body: formData,
           }
         )
