@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="style/skills.css" />
     <link rel="stylesheet" href="style/footer.css" />
     <link rel="stylesheet" href="style/sinlgle-blog.css" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
     <div class="conatiner">
@@ -47,7 +56,8 @@
       </header>
       <div class="blog-store">
         <div id="blog-store-one" class="blog-body">
-          <div class="blog-full-text">
+          <div id="root-single-blog"></div>
+          <!-- <div class="blog-full-text">
             <img id="image-blog" src="" />
             <div class="text-description-blog">
               <span class="blog-title"></span><br />
@@ -58,8 +68,8 @@
               <p id="small-desc" class="text-description-blog"></p>
             </div>
           </div>
-          <div id="text-desc" class="text-description-blog p-full"></div>
-          <div class="lekes-comments">
+          <div id="text-desc" class="text-description-blog p-full"></div> -->
+          <!-- <div class="lekes-comments">
             <div class="contain">
               <img id="like-icons" src="imagess/icons/like-svgrepo-com.svg" />
               <p id="likes-number">0</p>
@@ -68,18 +78,11 @@
               <img src="imagess/icons/comments-3-svgrepo-com.svg" />
               <p id="comments-number"></p>
             </div>
-          </div>
-          <div class="comments-container">
+          </div> -->
+          <div id="Likes_comments_jsx"></div>
+          <div id="comments_Add_jsx"></div>
+          <!-- <div class="comments-container">
             <div id="comments-adder" class="comments">
-              <!-- <div class="one-comments">
-                <div class="photo">
-                  <img src="imagess/uknown user.png" />
-                </div>
-                <div class="text-comm">
-                  <p class="name">unknown</p>
-                  <p class="comments-descr">nice picture of blog 👌👌👌</p>
-                </div>
-              </div>
               <div class="one-comments">
                 <div class="photo">
                   <img src="imagess/uknown user.png" />
@@ -89,35 +92,7 @@
                   <p class="comments-descr">nice picture of blog 👌👌👌</p>
                 </div>
               </div>
-              <div class="one-comments">
-                <div class="photo">
-                  <img src="imagess/uknown user.png" />
-                </div>
-                <div class="text-comm">
-                  <p class="name">Kalisa</p>
-                  <p class="comments-descr">nice picture of blog 👌👌👌</p>
-                </div>
-              </div>
-              <div class="one-comments">
-                <div class="photo">
-                  <img src="imagess/profile.png" />
-                </div>
-                <div class="text-comm">
-                  <p class="name">Tchami</p>
-                  <p class="comments-descr">
-                    😂😂😂😂😂 this things are so funy
-                  </p>
-                </div>
-              </div>
-              <div class="one-comments">
-                <div class="photo">
-                  <img src="imagess/uknown user.png" />
-                </div>
-                <div class="text-comm">
-                  <p class="name">unknown</p>
-                  <p class="comments-descr">nice picture of blog 👌👌👌</p>
-                </div>
-              </div> -->
+             
             </div>
             <div class="add-comments">
               <p class="add-title-com">Add New Comments</p>
@@ -133,7 +108,7 @@
                 <button id="comments-button">Comments >></button>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="center">
           <div class="button-left">&#8592;</div>
@@ -288,8 +263,11 @@
       </footer>
     </div>
     <script src="javascript/blogd/blog.js"></script>
-    <script src="javascript/blogd/singleblog.js"></script>
+    <!-- <script src="javascript/blogd/singleblog.js"></script> -->
     <script src="javascript/blogd/comments.js"></script>
+    <script type="text/babel" src="components/singleblogjsx.js"></script>
+    <script type="text/babel" src="components/commentsAdditionjsx.js"></script>
+    <script type="text/babel" src="components/commentsandlikesjsx.js"></script>
     <script src="javascript/homepage/singleblogpages.js"></script>
     <script>
       var menulist = document.querySelector(".menu-list-java");

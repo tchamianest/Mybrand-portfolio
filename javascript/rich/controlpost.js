@@ -118,8 +118,6 @@ const fecthBlogsToApi = async () => {
               blogToUpdate = data.blogs;
             });
 
-          console.log(blogToUpdate);
-          console.log(blogToUpdate.title);
           document.getElementById("title-of-blog").value = blogToUpdate.title;
           editor1.setHTML(`${blogToUpdate.template}`);
 
